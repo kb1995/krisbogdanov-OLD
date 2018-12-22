@@ -5,21 +5,13 @@ author:
 description:
 url:
 
+# Build settings
+permalink: :title/
 plugins:
   - jekyll-feed
   - jekyll-assets
   - jekyll-paginate-v2
   - jekyll-sitemap
-
-# Build settings
-permalink: :title/
-sass:
-  sass_dir: css
-
-# Social icons
-show_social_icons: true
-github_username: kb1995
-twitter_username: kris_bogdanov
 
 permalink: /:title/
 include: ["_pages"]
