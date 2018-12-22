@@ -1,5 +1,8 @@
 # Redirect domain aliases to primary domain
-https://kris.ventures/* https://kris.ventures/:splat 301!
+https://kris.ventures/* https://krisbogdanov.com/:splat 301!
 https://www.kris.ventures/* https://krisbogdanov.com/:splat 301!
+
+# Optional: Redirect default Netlify subdomain to primary domain
+https://kris-portfolio.netlify.com/* https://krisbogdanov.com/:splat 301!
 
 /tag /
