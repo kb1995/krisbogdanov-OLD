@@ -1,5 +1,5 @@
 # Redirect domain aliases to primary domain
-https://krisbogdanov.com/* https://kris.ventures/:splat 301!
-https://www.krisbogdanov.com/* https://kris.ventures/:splat 301!
+https://kris.ventures/* https://kris.ventures/:splat 301!
+https://www.kris.ventures/* https://krisbogdanov.com/:splat 301!
 
 /tag /
