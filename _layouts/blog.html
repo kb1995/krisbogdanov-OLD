@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    <div class="">
+      {% include header-blog.html %}
+      <div class="" style="background: linear-gradient( rgba(0, 0, 0, 0.50 ), rgba(0, 0, 0, 0.50)), url({% asset "{{ page.image }}" @path %});
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 500px;
+      ">
+      </div>
+      <div class="blog-main-wrapper my-3">
+        <div class="text-center-children">
+          <h4 class="text-muted text-center date">{{ page.date | timeago }}</h4>
+          <h1>{{ page.title }}</h1>
+          <h3>{{ page.subtitle }}</h3>
+          <div>
+            {% if page.tags.size > 0 %}
+              <div class="tag-wrapper">
+                {% for tag in page.tags %}
+                  <a class="tag btn btn-outline-secondary btn-sm" href = "/tag/{{tag | replace: ' ', '-'}}">{{tag}}</a>
+                {%endfor %}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+
+        <hr class="hr-w-75">
+
+        <section>
+          <div class="blog-content-wrapper">
+            {{ content }}
+          </div>
+        </section>
+      </div>
+    </div>
+    {% include footer.html %}
+  </body>
+</html>

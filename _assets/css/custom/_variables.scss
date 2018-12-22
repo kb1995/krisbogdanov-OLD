@@ -1,0 +1,22 @@
+$primary: #1c92d2;
+
+.btn-primary{
+  a{
+    color: white;
+    &:hover{
+      color: white;
+    }
+  }
+  
+}
+
+.headroom {
+  will-change: transform;
+  transition: transform 300ms linear;
+}
+.headroom--pinned {
+  transform: translateY(0%);
+}
+.headroom--unpinned {
+  transform: translateY(-100%);
+}

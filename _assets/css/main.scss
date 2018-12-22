@@ -1,0 +1,53 @@
+---
+---
+
+@charset 'UTF-8';
+
+@import './custom/custom_classes';
+
+// import bootstrap
+@import 'bootstrap/bootstrap';
+
+// includes
+@import 'custom/includes/header';
+
+// pages
+@import 'custom/pages/index';
+@import 'custom/pages/blog';
+
+html {
+  font-size: 14px;
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+  font-weight: 900;
+}
+
+h3{
+  font-weight: 800
+}
+
+h5{
+  font-weight: 700;
+}
+
+a{
+ text-decoration: none;
+ color: #333;
+ transition: color 0.2 ease-in-out;
+ &:hover{
+   text-decoration: none;
+   color: black;
+ } 
+}
+

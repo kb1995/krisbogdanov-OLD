@@ -1,0 +1,29 @@
+--- 
+layout: default 
+title: Blog 
+permalink: /blog/ 
+order: 1
+icon: fas fa-list
+---
+
+<section class="blog-wrapper">
+  {% include header.html %}
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      {% for post in site.posts %}
+        <div class="col-12 my-3">
+          <a href="{{ post.url }}">
+            <div class="d-flex box-shadow justify-content-center flex-column align-items-center article-wrapper" style="background: linear-gradient( rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url({% asset "{{ post.image }}" @path %});
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;">
+              <h2>{{ post.title }}</h2>
+              <h5>{{ post.subtitle }}</h5>
+              <p>{{ post.date | timeago }}</p>
+            </div>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

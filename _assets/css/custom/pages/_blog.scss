@@ -1,0 +1,39 @@
+.blog-main-wrapper{
+  max-width: 800px;
+  padding: 15px 0;
+  margin: 0 auto;
+}
+
+.blog-wrapper{
+  .article-wrapper{
+    padding: 7px;
+    height: 250px;
+    max-width: 80vw;
+    margin: 0 auto;
+    border-radius: 9px;
+
+    transition: transform 0.3s ease-in-out;
+
+    &:hover{
+      transform: scale(1.01);
+    }
+    
+    h2, h5, p{
+      color: #FFF;
+    }
+  }
+}
+
+.blog-content-wrapper{
+  h2{
+    text-align: center;
+  }
+}
+
+.tag-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 25px 0;
+
+}

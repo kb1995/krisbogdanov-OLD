@@ -1,0 +1,32 @@
+# Site settings
+title: Kris 👋
+email:
+author:
+description:
+url:
+
+plugins:
+  - jekyll-feed
+  - jekyll-assets
+  - jekyll-paginate-v2
+  - jekyll-sitemap
+
+# Build settings
+permalink: :title/
+sass:
+  sass_dir: css
+
+# Social icons
+show_social_icons: true
+github_username: kb1995
+twitter_username: kris_bogdanov
+
+permalink: /:title/
+include: ["_pages"]
+
+jekyll_timeago:
+  depth: 1
+
+tag_page_layout: tag_page
+tag_page_dir: tag
+tag_permalink_style: pretty

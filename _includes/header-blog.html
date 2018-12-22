@@ -1,0 +1,19 @@
+<nav class="header blog bg-light navbar navbar-expand-md py-2 sticky-top">
+  <div class="container">
+    <a href="{{ site.baseurl }}/" class="navbar-brand">
+      <h3 style="font-size: 50px" class="d-inline align-middle pl-3 text-primary">👨‍🍳</h3>
+    </a>
+    <div class="justify-content-end">
+      <ul class="navbar-nav">
+        <li class="nav-item mr-3">
+          <a href="/"><i class="fas fa-home"></i> Home</a>
+        </li>
+        {% assign sorted_pages = site.pages | sort:"order" %} {% for page in sorted_pages %} {% if page.layout == "default" %}
+        <li class="nav-item">
+          <a href="{{page.url}}"><i class="{{page.icon}}"></i> {{page.title}}</a>
+        </li>
+        {% endif %} {% endfor %}
+      </ul>
+    </div>
+  </div>
+</nav>
