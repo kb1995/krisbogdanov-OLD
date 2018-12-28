@@ -2,6 +2,23 @@
   max-width: 800px;
   padding: 15px 0;
   margin: 0 auto;
+
+  .main-title{
+    font-size: 55px;
+    @include media-breakpoint-down(xs) {
+      font-size: 42px;
+    }
+  }
+  .subtitle{
+    font-size: 42px;
+    @include media-breakpoint-down(xs) {
+      font-size: 32px;
+    }
+  }
+
+  a{
+    color: $secondary;
+  }
 }
 
 .blog-wrapper{
@@ -25,15 +42,63 @@
 }
 
 .blog-content-wrapper{
+  img{
+    width: 80vw;
+    max-width: 500px;
+    margin: 0 auto;
+    display: block;
+  }
   h2{
     text-align: center;
+    font-size: 48px;
+    margin: 2rem 0;
+  }
+  p{
+    font-size: 24px;
+    margin: 2rem 0;
+  }
+  li{
+    font-size: 24px;
+  }
+  @include media-breakpoint-down(xs) {
+    h2{
+      font-size: 36px;
+    }
+    p {
+      font-size: 16px;
+      margin: 1rem 0;
+    }
+    li{
+      font-size: 16px;
+    }
   }
 }
 
 .tag-wrapper{
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin: 25px 0;
+  a{
+    font-size: 20px;
+  }
+}
 
+
+.share-buttons {
+  text-align: center;
+  
+  padding: 8px 15px;
+  margin: 10px;
+  .btn{
+    font-size: 20px;
+    background-color: #38A1F3;
+    color: white;
+    padding: 17px 30px;
+    transition: all 0.3 ease-in-out;
+    &:hover{
+      background-color: white;
+      color: #38A1F3;
+      border: 1px solid #38A1F3;
+    }
+  }
 }

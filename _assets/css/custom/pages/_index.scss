@@ -5,7 +5,7 @@
   grid-template-rows: 1fr;
   @include media-breakpoint-down(lg) { 
     grid-template-columns: repeat(1,1fr);
-}
+  }
 
   .item{
     border-radius: 7px;
@@ -18,14 +18,6 @@
       transform: scale(1.03);
     }
 
-    h4{
-      font-weight: 800;
-    }
-
-    p{
-      font-weight: 500;
-    }
-
     &.content{
       background-color: hsla(10,10%,15%,0.9);
       padding: 20px;
@@ -36,4 +28,18 @@
 .hero-text{
   max-width: 750px;
   margin: 0 auto;
+  .main{
+    font-size: 3.5rem;;
+  }
+  .submain{
+    font-size: 2rem;
+  }
+  @include media-breakpoint-down(lg) { 
+    .main{
+      font-size: 2.5rem;
+    }
+    .submain{
+      font-size: 1.5rem;
+    }
+  }
 }

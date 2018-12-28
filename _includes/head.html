@@ -4,8 +4,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="Hi, my name is Kris Bogdanov. I am a Software Developer and I love making websites and apps that make your life easier and better. I also love creating content.">
+  <meta name="description" content="Hi, my name is Kris Bogdanov. A software developer that loves making products and websites. I also love creating content.">
   
+  {% if page.title %}
+    <meta content="{{ page.title }}" property="og:title">
+  {% else %}
+    <meta content="{{ site.title }}" property="og:title">
+  {% endif %}
+
+  {% if page.subtitle %}
+    <meta content="{{ page.subtitle }}" property="og:description">
+  {% else %}
+    <meta content="{{ site.description }}" property="og:description">
+  {% endif %}
+
+  {% if page.url %}
+    <meta content="{{ site.url }}{{ page.url }}" property="og:url">
+  {% endif %}
+
+  {% if page.date %}
+    <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
+    <meta content="{{ site.url }}/about/" property="article:author">
+  {% endif %}
+
+  {% if page.image %}
+    <meta content="{% asset "{{ page.image }}" @path %}" property="og:image">
+  {% else %}
+    <!-- <meta content="" property="og:image"> -->
+  {% endif %}
+
+  <!-- Twitter cards metadatas -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@krisbogdanov">
+  <meta name="twitter:creator" content="@kris_bogdanov">
+  {% if page.title %}
+    <meta name="twitter:title" content="{{ page.title }}">
+  {% else %}
+    <meta name="twitter:title" content="{{ site.title }}">
+  {% endif %}
+
+  {% if page.url %}
+    <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+  {% endif %}
+
+  {% if page.subtitle %}
+    <meta name="twitter:description" content="{{ page.description }}">
+  {% endif %}
+
+  {% if page.image %}
+    <meta name="twitter:image:src" content="{{ site.url }}/{{ page.image }}">
+  {% endif %}
+
   <title>
     {% if page.url == "/" %}
       {{ site.title }}
@@ -18,7 +67,8 @@
   <link rel="shortcut icon" type="image/png" href="{% asset "favicon.png" @path %}"/>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://use.typekit.net/kqw7kgr.css">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">

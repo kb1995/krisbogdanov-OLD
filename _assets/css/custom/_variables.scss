@@ -1,13 +1,11 @@
 $primary: #1c92d2;
+$secondary: #ad1414;
 
 .btn-primary{
-  a{
+  color: white !important;
+  &:hover{
     color: white;
-    &:hover{
-      color: white;
-    }
-  }
-  
+  }  
 }
 
 .headroom {

@@ -4,6 +4,7 @@ email:
 author:
 description:
 url:
+twitter_username: kris_bogdanov
 
 # Build settings
 permalink: :title/

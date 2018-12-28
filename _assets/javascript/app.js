@@ -12,21 +12,28 @@ headroom.init();
 
 // scroll reveal
 
-ScrollReveal().reveal('.design',{
+// ScrollReveal().reveal('.design',{
+//   delay: 0,
+//   distance: '50px',
+//   duration: 1000,
+//   origin: "right"
+// })
+// ScrollReveal().reveal('.build',{
+//   delay: 300,
+//   distance: '50px',
+//   duration: 1000,
+//   origin: "right"
+// })
+// ScrollReveal().reveal('.ship',{
+//   delay: 600,
+//   distance: '50px',
+//   duration: 1000,
+//   origin: "right"
+// })
+
+ScrollReveal().reveal('.phrase',{
   delay: 0,
   distance: '50px',
-  duration: 1000,
-  origin: "right"
-})
-ScrollReveal().reveal('.build',{
-  delay: 300,
-  distance: '50px',
-  duration: 1000,
-  origin: "right"
-})
-ScrollReveal().reveal('.ship',{
-  delay: 600,
-  distance: '50px',
-  duration: 1000,
-  origin: "right"
+  duration: 1500,
+  origin: "top"
 })

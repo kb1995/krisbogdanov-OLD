@@ -8,14 +8,14 @@ layout: default
     <div class="container">
       <div class="h-100-vh">
         <div class="row">
-          <div class="col-12 my-3 my-lg-5 d-flex flex-column flex-lg-row text-center justify-content-around">
+          <div class="col-12 my-3 my-lg-5 d-flex flex-column flex-lg-row text-left text-lg-center justify-content-around">
             <h3 class="phrase design"><span>💡</span> &nbsp; Design</h3>
             <h3 class="phrase build"><span>🚧</span> &nbsp; Build</h3>
             <h3 class="phrase ship"><span>🛳</span> &nbsp; Ship</h3>
           </div>
           <div class="col-12 text-center hero-text">
-            <h1>Hi, my name is Kris</h1>
-            <h4>A software developer that makes apps and websites to make your life better</h4>
+            <h1 class="main">Hi, my name is Kris</h1>
+            <h4 class="submain">A software developer that loves coding and making products</h4>
           </div>
           <div class="col-12 my-5">
             <div class="row">
@@ -24,7 +24,7 @@ layout: default
                 <div class="grid">
                   {% for post in site.posts %}
                     {% if post.category == "project" %}
-                    <a href="{{ post.url }}">
+                    <a class="no-decoration" href="{{ post.url }}">
                         <div class="item box-shadow d-flex justify-content-center align-items-center" style="background: linear-gradient( rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url({% asset "{{ post.image }}" @path %});
                         background-repeat: no-repeat;
                         background-size: cover;
@@ -42,25 +42,25 @@ layout: default
               <div class="col-lg-6 mt-5 mt-lg-0">
                 <h2 class="mb-3">Content and Social Media</h2>
                 <div class="grid">
-                  <a href="/blog">
+                  <a class="no-decoration" href="/blog">
                     <div class="item content box-shadow">
                       <h4><i class="fas fa-marker mr-3"></i>Blog</h4>
                       <p>Writing about everything, but a lot of personal growth and software development.</p>
                     </div>
                   </a>
-                  <a href="https://twitter.com/kris_bogdanov" target="_blank">
+                  <a class="no-decoration" href="https://twitter.com/kris_bogdanov" target="_blank">
                     <div class="item content box-shadow">
                       <h4><i class="fab fa-twitter mr-3"></i>Twitter</h4>
                       <p>Transparent view of being a self-taugh software developer and inspiring maker.</p>
                     </div>
                   </a>
-                  <a href="https://github.com/kb1995" target="_blank">
+                  <a class="no-decoration" href="https://github.com/kb1995" target="_blank">
                     <div class="item  content box-shadow">
                       <h4><i class="fab fa-github mr-3"></i>Github</h4>
                       <p>No secrets - every line of code is here for you to see. All projects are open sourced.</p>
                     </div>
                   </a>
-                  <a href="https://www.linkedin.com/in/kris-bogdanov/" target="_blank">
+                  <a class="no-decoration" href="https://www.linkedin.com/in/kris-bogdanov/" target="_blank">
                     <div class="item content box-shadow">
                       <h4><i class="fab fa-linkedin-in mr-3"></i>Linkedin</h4>
                       <p>Have we met somewhere? Want to get in touch with me? Let's connect on Linkedin.</p>

@@ -4,43 +4,42 @@ image: where-did-my-time-go/main.jpg
 title: Where did my time go?
 subtitle: Log and categorise your activities
 permalink: /where-did-my-time-go/
-date: 2018-12-12T21:21:13.657Z
+date: 2018-12-30T21:21:13.657Z
 category: project
 tags: [web, project, productivity]
 ---
 
 <section>
   <div class="text-center my-4">
-    <div class="btn btn-primary"><a href="https://wheredidmytimego.netlify.com/" target="_blank">Visit Website</a></div>
+    <a class="no-underline btn btn-primary" href="https://wheredidmytimego.netlify.com/" target="_blank">Visit Website</a>
   </div>
   <div>
-    <h2>Problem and Idea</h2>
-    <p>I wake up between 5-6am every morning. And I am trying to be as productive as possible over the next 3-4 hours.</p>
-    <p>But often happens that the morning is over, and I have the feeling that I have done nothing.</p>
-    <p>In order to prevent this, I started to log every activity that I did on a notepad and the time that I did it in. When the morning was over, I could look at this log and inspect my activities</p>
-    <p>I realised that I could build a product that simplifies this process a little bit</p>
+    <h2>Idea and problem</h2>
+    <p>I wake up between 5-6am every morning with the goal to have a productive 3-4 hours before I start my day. 🏃‍♀</p>
+    <p>However, sometimes I have the feeling that I achieve nothing.</p>
+    <p>In order to tackle this, I logged every activity I did on a notepad. When the morning was over, I looked back and inspected my activities.</p>
+    <p>Good product to build to solve this.</p>
   </div>
-  <hr class="hr-w-25">
+  <img src="{% asset "where-did-my-time-go/activity-table.png" @path %}">
   <div>
     <h2>Design & Build</h2>
-    <h5>Design</h5>
-    <p>I wanted to simply log my activities and categorise them as Productive or Unproductive.</p>
-    <p>Once done, I also wanted to view have a timeline where I could inspect all my activities in a nice and clear manner</p>
-    <h5>Build</h5>
-    <p>I built the product livestreaming it on Twitch. This was a pretty cool experience, but still a bit stressful, as never before people have watched me code.</p>
-    <p>I would love to continue doing this in the future, but this time with commentary. It would be a good material for YouTube also, as it could show inspiring Software Developers what's coding really like.</p>
-
-    <p>Where did my time go was built using ReactJS, as this was the fastest solution for me</p>
+    <h3>Design 🎨</h3>
+    <p>I wanted a simple activity log and categorise my tasks as either <b>productive</b> or <b>unproductive</b>.</p>
+    <p>Once done, I was going to have a timeline where I can inspect all activities in a cool, minimalist timeline.</p>
+    <h3>Build 🏭</h3>
+    <p>I built the product livestream on Twitch. This was a pretty cool experience - I never experienced so many people watching me code before. Must have been pretty boring for them.</p>
+    <p>Where did my time go was built in <b>ReactJS</b>. I don't need any backend (I store information in localStorage).</p>
+    <p>I'm also pretty fast and efficient with ReactJS, so why not.</p>
   </div>
-  <hr class="hr-w-25">
+  <img src="{% asset "where-did-my-time-go/timeline.png" @path %}">
   <div>
     <h2>Ship</h2>
-    <p>As soon as I hit MVP stage, which took me about 5 hours of programming, I decided to stop working on it and share it to my Twitter account</p>
-    <p>I have several additional features I plan to include in the near future:</p>
+    <p>As soon as the product hit MVP stage, I decided to stop working on it and share it on Twitter. <b>It took me about 5 hours of coding</b>.</p>
+    <p>More features to come in the near future:</p>
     <ul>
-      <li>Ability to edit Activities</li>
+      <li>Ability to edit activities</li>
       <li>Drag and drop activities</li>
-      <li>More statistics in the Timeline page, e.g. Percentage of productive vs unproductive tasks; longest task</li>
+      <li>More statistics in the Timeline section, e.g. percentage of productive vs unproductive tasks; longest task.</li>
     </ul>
   </div>
 </section>
