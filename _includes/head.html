@@ -4,36 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="Hi, my name is Kris Bogdanov. A software developer that loves making products and websites. I also love creating content.">
-  
-  {% if page.title %}
-    <meta content="{{ page.title }}" property="og:title">
-  {% else %}
-    <meta content="{{ site.title }}" property="og:title">
-  {% endif %}
+  <meta name="description" content="Hi, my name is Kris Bogdanov. A software developer that loves making products and websites. I also love creating content about coding and productivity.">
 
-  {% if page.subtitle %}
-    <meta content="{{ page.subtitle }}" property="og:description">
-  {% else %}
-    <meta content="{{ site.description }}" property="og:description">
-  {% endif %}
-
-  {% if page.url %}
-    <meta content="{{ site.url }}{{ page.url }}" property="og:url">
-  {% endif %}
-
-  {% if page.date %}
-    <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
-    <meta content="{{ site.url }}/about/" property="article:author">
-  {% endif %}
-
-  {% if page.image %}
-    <meta content="{% asset "{{ page.image }}" @path %}" property="og:image">
-  {% else %}
-    <!-- <meta content="" property="og:image"> -->
-  {% endif %}
-
-  <!-- Twitter cards metadatas -->
+  <!-- Twitter cards META tags -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@krisbogdanov">
   <meta name="twitter:creator" content="@kris_bogdanov">
@@ -48,11 +21,11 @@
   {% endif %}
 
   {% if page.subtitle %}
-    <meta name="twitter:description" content="{{ page.description }}">
+    <meta name="twitter:description" content="{{ page.subtitle }}">
   {% endif %}
 
   {% if page.image %}
-    <meta name="twitter:image:src" content="{{ site.url }}/{{ page.image }}">
+    <meta name="twitter:image:src" content="{{ site.url }}{% asset "{{ page.image }}" @path %}">
   {% endif %}
 
   <title>
@@ -66,16 +39,25 @@
   <!-- Favicon -->
   <link rel="shortcut icon" type="image/png" href="{% asset "favicon.png" @path %}"/>
 
-  <!-- Google Fonts -->
-  <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> -->
+  <!-- Fonts -->
   <link rel="stylesheet" href="https://use.typekit.net/kqw7kgr.css">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
   
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122082119-4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-122082119-4');
+  </script>
+  
   <!-- CSS -->
   {% asset main.css %}
 
-  <!-- Other Stuff -->
+  <!-- Other JS stuff -->
   <script src="https://unpkg.com/scrollreveal"></script>
 </head>
