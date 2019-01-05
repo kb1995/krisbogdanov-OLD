@@ -1,12 +1,19 @@
 <head>
+  <title>
+    {% if page.url == "/" %}
+      {{ site.title }}
+    {% else %}
+      {{ page.title }} 	| {{ site.title }}
+    {% endif %}
+  </title>
 
   <!-- META tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="Hi, my name is Kris Bogdanov. A software developer that loves making products and websites. I also love creating content about coding and productivity.">
+  <meta name="description" content="I'm Kris Bogdanov - a self-taught full-stack developer that writes about coding and personal growth. I also make products with the goal of making money online.">
 
-  <!-- Twitter cards META tags -->
+  <!-- Twitter META tags -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@krisbogdanov">
   <meta name="twitter:creator" content="@kris_bogdanov">
@@ -28,13 +35,25 @@
     <meta name="twitter:image:src" content="{{ site.url }}{% asset "{{ page.image }}" @path %}">
   {% endif %}
 
-  <title>
-    {% if page.url == "/" %}
-      {{ site.title }}
-    {% else %}
-      {{ page.title }} 	| {{ site.title }}
-    {% endif %}
-  </title>
+  <!-- Facebook META tags -->
+  {% if page.url %}
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta property="og:type"               content="article" />
+  {% endif %}
+
+  {% if page.title %}
+    <meta property="og:title" content="{{ page.title }}" />
+  {% else %}
+    <meta property="og:title"  content="{{ site.title }}">
+  {% endif %}
+
+  {% if page.subtitle %}
+    <meta property="og:description" content="{{ page.subtitle }}" />
+  {% endif %}
+  
+  {% if page.image %}
+    <meta property="og:image" content="{{ site.url }}{% asset "{{ page.image }}" @path %}" />
+  {% endif %}
 
   <!-- Favicon -->
   <link rel="shortcut icon" type="image/png" href="{% asset "favicon.png" @path %}"/>
