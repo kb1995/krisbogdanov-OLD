@@ -11,7 +11,7 @@
       height: 500px;
       ">
       </div>
-      <div class="blog-main-wrapper my-3">
+      <div class="blog-main-wrapper my-3 mb-5">
         <div class="text-center-children">
           <h4 class="text-muted text-center date">{{ page.date | timeago }}</h4>
           <h1 class="main-title">{{ page.title }}</h1>
@@ -38,7 +38,12 @@
         </section>
 
         <div class="share-buttons">
-            <a class="btn" href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.twitter_username }}&related={{ site.twitter_username }}" rel="nofollow" target="_blank" title="Share on Twitter"><i class="fab fa-twitter mr-3"></i>Tweet</a>
+          <a class="btn tweet" href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.twitter_username }}&related={{ site.twitter_username }}" rel="nofollow" target="_blank" title="Share on Twitter"><i class="fab fa-twitter mr-3"></i>Tweet</a>
+        </div>
+        <hr class="hr-w-25">
+        <div class="d-flex align-items-center">
+            <h5 class="mr-3 mb-0">Get a tweet when I write a new article</h5>
+            <a href="https://twitter.com/kris_bogdanov?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @kris_bogdanov</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
       </div>
     </div>
