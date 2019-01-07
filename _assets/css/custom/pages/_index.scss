@@ -22,6 +22,15 @@
       background-color: hsla(10,10%,15%,0.8);
       padding: 20px;
     }
+
+    @include media-breakpoint-down(xs) {
+      h4{
+        font-size: 2rem;
+      }
+      p{
+        font-size: 1.5rem;
+      }
+    }
   }
 }
 
