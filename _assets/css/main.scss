@@ -25,6 +25,30 @@ html {
   }
 }
 
+#mc_embed_signup{
+  background:#fff; 
+  clear:left; 
+  width:100%;
+
+  input.email{
+    font-size: 20px;
+    border: 0;
+    box-shadow: 0 2px 4px hsla(0,20%,20%,0.7);
+    width: 80vw;
+    margin-bottom: 20px;
+    height: 60px;
+    padding-left: 20px;
+  }
+  .clear{
+    .button{
+      background-color: #1c92d2;
+      width: 40vw;
+      height: 40px;
+      font-size: 20px;
+    }
+  }
+}
+
 body{
   font-family: proxima-nova,sans-serif;
   font-weight: 400;
