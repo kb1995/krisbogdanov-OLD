@@ -1,26 +1,4 @@
-.blog-main-wrapper{
-  max-width: 800px;
-  padding: 15px 0;
-  margin: 0 auto;
-
-  .main-title{
-    font-size: 55px;
-    @include media-breakpoint-down(xs) {
-      font-size: 42px;
-    }
-  }
-  .subtitle{
-    font-size: 42px;
-    @include media-breakpoint-down(xs) {
-      font-size: 32px;
-    }
-  }
-
-  a:not(.btn){
-    color: $secondary;
-  }
-}
-
+// /blog => article lists
 .blog-wrapper{
   .article-wrapper{
     padding: 7px;
@@ -41,6 +19,29 @@
   }
 }
 
+.blog-main-wrapper{
+  max-width: 850px;
+  margin: 0 auto;
+
+  .main-title{
+    font-size: 52px;
+    line-height: 1;
+    @include media-breakpoint-down(xs) {
+      font-size: 40px;
+    }
+  }
+  .subtitle{
+    font-size: 28px;
+    @include media-breakpoint-down(xs) {
+      font-size: 20px;
+    }
+  }
+
+  a:not(.btn){
+    color: $secondary;
+  }
+}
+
 .blog-content-wrapper{
   img{
     width: 80vw;
@@ -50,15 +51,16 @@
   }
   h2{
     text-align: center;
-    font-size: 48px;
-    margin: 0;
-    margin-top: 2rem;
+    font-size: 46px;
+    line-height: 1;
+
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
   }
   p{
     font-size: 24px;
     margin: 0;
-    margin-bottom: 2rem;
-    
+    margin: 1rem; 
   }
   li{
     font-size: 24px;
@@ -86,8 +88,12 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+
   a{
     font-size: 20px;
+    @include media-breakpoint-down(xs) {
+      font-size: 18px;
+    }
   }
 }
 
