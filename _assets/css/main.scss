@@ -26,28 +26,40 @@ html {
 }
 
 #mc_embed_signup{
-  background:#fff; 
+  background: hsla(0,0%,80%,0.2);
+  padding: 25px;
+  box-shadow: 0 1px 4px hsla(0,0%,20%,0.2);
   clear:left; 
   width:100%;
 
   label{
     font-size: 26px;
+    padding: 0;
+  }
+
+  p{
+    font-size: 18px;
   }
 
   input.email{
     font-size: 20px;
     border: 0;
-    box-shadow: 0 2px 4px hsla(0,20%,20%,0.7);
-    width: 80vw;
+    box-shadow: 0 4px 6px hsla(0,0%,0%,0.2);
+    width: 100%;
+    max-width: 600px;
     margin-bottom: 20px;
     height: 60px;
     padding-left: 20px;
+    transition: box-shadow 0.3s ease-in-out;
+    &:hover, &:focus{
+      box-shadow: 0 1px 3px hsla(0,0%,0%,0.2);
+    }
   }
   .clear{
     .button{
-      background-color: #1c92d2;
-      width: 40vw;
-      height: 40px;
+      background-color: #ad1414;
+      width: 155px;
+      height: 45px;
       font-size: 20px;
       font-weight: 600;
     }
