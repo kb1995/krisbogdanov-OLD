@@ -19,7 +19,7 @@ layout: default
         <div class="col-12 my-5">
           <div class="row">
             <div class="col-lg-6">
-              <h2 class="mb-3">Projects</h2>
+              <h2 class="mb-5">Projects</h2>
               <div class="grid">
                 {% for post in site.posts %}
                   {% if post.category == "project" %}
@@ -39,29 +39,33 @@ layout: default
               </div>
             </div>
             <div class="col-lg-6 mt-5 mt-lg-0">
-              <h2 class="mb-3">Content and Social Media</h2>
+              <h2 class="mb-5">Content and Social Media</h2>
               <div class="grid">
                 <a class="no-decoration" href="/blog">
-                  <div class="item item-hover rounded-2 p-4 content box-shadow">
-                    <h4><i class="fas fa-marker mr-3"></i>Blog</h4>
+                  <div class="item item-hover rounded-2 px-4 pt-4 mb-5 mb-lg-4 bg-content box-shadow position-relative">
+                    <i class="icon-absolute ml-4 fas fa-marker"></i>
+                    <h4>Blog</h4>
                     <p>Writing about everything, but a lot of personal growth and software development.</p>
                   </div>
                 </a>
                 <a class="no-decoration" href="https://twitter.com/kris_bogdanov" target="_blank">
-                  <div class="item item-hover rounded-2 p-4 content box-shadow">
-                    <h4><i class="fab fa-twitter mr-3"></i>Twitter</h4>
+                  <div class="item item-hover rounded-2 px-4 pt-4 mb-5 mb-lg-4 bg-content box-shadow">
+                    <i class="icon-absolute ml-4 fab fa-twitter"></i>
+                    <h4>Twitter</h4>
                     <p>Transparent view of being a self-taught software developer and inspiring maker.</p>
                   </div>
                 </a>
                 <a class="no-decoration" href="https://github.com/kb1995" target="_blank">
-                  <div class="item item-hover rounded-2 p-4 content box-shadow">
-                    <h4><i class="fab fa-github mr-3"></i>Github</h4>
+                  <div class="item item-hover rounded-2 px-4 pt-4 mb-5 mb-lg-4 bg-content box-shadow">
+                    <i class="icon-absolute ml-4 fab fa-github"></i>
+                    <h4>Github</h4>
                     <p>No secrets - every line of code is here for you to see. All projects are open sourced.</p>
                   </div>
                 </a>
                 <a class="no-decoration" href="https://www.linkedin.com/in/kris-bogdanov/" target="_blank">
-                  <div class="item item-hover rounded-2 p-4 content box-shadow">
-                    <h4><i class="fab fa-linkedin-in mr-3"></i>Linkedin</h4>
+                  <div class="item item-hover rounded-2 px-4 pt-4 mb-5 mb-lg-4 bg-content box-shadow">
+                    <i class="icon-absolute ml-4 fab fa-linkedin-in"></i>
+                    <h4>Linkedin</h4>
                     <p>Have we met somewhere? Want to get in touch with me? Let's connect on Linkedin.</p>
                   </div>
                 </a>
