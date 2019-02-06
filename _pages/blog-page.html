@@ -6,20 +6,20 @@ order: 1
 icon: fas fa-list
 ---
 
-<section class="blog-wrapper">
+<section class="blog-wrapper pb-5">
   {% include header.html %}
   <div class="container">
     <div class="row d-flex justify-content-center">
       {% for post in site.posts %}
-        <div class="col-12 my-3">
+        <div class="col-lg-6 col-12 my-3">
           <a class="no-decoration" href="{{ post.url }}">
-            <div class="text-center-children d-flex box-shadow justify-content-center flex-column align-items-center article-wrapper" style="background: linear-gradient( rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)), url({% asset "{{ post.image }}" @path %});
+            <div class="text-center-children rounded-2 d-flex item-hover box-shadow justify-content-center flex-column align-items-center article-wrapper p-3" style="background: linear-gradient( rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)), url({% asset "{{ post.image }}" @path %});
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;">
               <h2>{{ post.title }}</h2>
-              <h5>{{ post.subtitle }}</h5>
-              <p>{{ post.date | timeago }}</p>
+              <h5 class="d-none d-lg-inline text-muted">{{ post.subtitle }}</h5>
+              <p class="text-muted">{{ post.date | timeago }}</p>
             </div>
           </a>
         </div>

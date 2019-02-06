@@ -8,15 +8,8 @@
   }
 
   .item{
-    border-radius: 7px;
-    padding: 10px;
     color: white;
     height: 215px;
-    transition: transform 0.3s ease-in-out;
-
-    &:hover{
-      transform: scale(1.03);
-    }
 
     &.content{
       background-color: hsla(10,10%,15%,0.8);

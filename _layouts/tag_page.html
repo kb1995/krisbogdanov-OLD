@@ -13,13 +13,13 @@
             {% for post in page.posts %}
               <div class="col-12 my-3">
                 <a class="no-decoration" href="{{ post.url }}">
-                  <div class="d-flex box-shadow justify-content-center flex-column align-items-center article-wrapper" style="background: linear-gradient( rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url({% asset "{{ post.image }}" @path %});
+                  <div class="d-flex rounded-2 box-shadow justify-content-center flex-column align-items-center article-wrapper" style="background: linear-gradient( rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url({% asset "{{ post.image }}" @path %});
                   background-repeat: no-repeat;
                   background-size: cover;
                   background-position: center;">
                     <h2>{{ post.title }}</h2>
-                    <h5>{{ post.subtitle }}</h5>
-                    <p>{{ post.date | timeago }}</p>
+                    <h5 class="d-none d-lg-inline text-muted">{{ post.subtitle }}</h5>
+                    <p class="text-muted">{{ post.date | timeago }}</p>
                   </div>
                 </a>
               </div>

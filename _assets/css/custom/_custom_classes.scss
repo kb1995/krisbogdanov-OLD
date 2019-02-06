@@ -15,7 +15,6 @@
 }
 
 // hr width classes
-
 .hr-w-25{
   width: 25%;
 }
@@ -50,4 +49,16 @@
   background: #1c92d2;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to left, #f2fcfe, #1c92d2);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #f2fcfe, #1c92d2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.rounded-2{
+  border-radius: 2rem;
+}
+
+.item-hover{
+  transition: transform 0.2s ease-in;
+
+  &:hover{
+    transform: translateY(-4px);
+  }
 }
