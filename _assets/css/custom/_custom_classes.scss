@@ -37,11 +37,25 @@
   }
 }
 
-// TODO update this class
 .box-shadow{
-  box-shadow: 0 5px 15px hsla(0, 0%, 0%, 0.2);
-  -webkit-box-shadow: 0 5px 15px hsla(0, 0%, 0%, 0.2);
-  -moz-box-shadow: 0 5px 15px hsla(0, 0%, 0%, 0.2);
+  position: relative;
+  box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.2);
+
+  &::before{
+    content: ' ';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 5px 15px hsla(0, 0%, 0%, 0.4);
+    opacity: 0;
+    transition: opacity 400ms;
+    border-radius: 2rem;
+  }
+  &:hover::before{
+    opacity: 1;
+  }
 }
 
 // TODO change name of this class
