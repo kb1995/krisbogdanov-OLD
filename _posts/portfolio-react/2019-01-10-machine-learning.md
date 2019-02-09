@@ -4,7 +4,7 @@ image: learner-into-developer/main.jpg
 title: Build your ReactJS portfolio - Machine Learning app
 subtitle: 
 permalink: build/portfolio/react/machine-learning/
-date: 2019-01-12T16:03:13.657Z
+date: 2020-01-12T16:03:13.657Z
 category: article
 tags: [reactjs, portfolio]
 ---

@@ -9,31 +9,11 @@ var headroom  = new Headroom(myElement, {
 // initialise
 headroom.init(); 
 
-
-// scroll reveal
-
-// ScrollReveal().reveal('.design',{
-//   delay: 0,
-//   distance: '50px',
-//   duration: 1000,
-//   origin: "right"
-// })
-// ScrollReveal().reveal('.build',{
-//   delay: 300,
-//   distance: '50px',
-//   duration: 1000,
-//   origin: "right"
-// })
-// ScrollReveal().reveal('.ship',{
-//   delay: 600,
-//   distance: '50px',
-//   duration: 1000,
-//   origin: "right"
-// })
-
 ScrollReveal().reveal('.phrase',{
   delay: 0,
   distance: '50px',
   duration: 1500,
   origin: "top"
 })
+
+
