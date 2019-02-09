@@ -4,10 +4,17 @@ image: learner-into-developer/main.jpg
 title: Build your ReactJS portfolio - Machine Learning app
 subtitle: 
 permalink: build/portfolio/react/machine-learning/
-date: 2019-05-12T16:03:13.657Z
+date: 2019-01-12T16:03:13.657Z
 category: article
 tags: [reactjs, portfolio]
 ---
+
+```javascript
+.class{
+  cursor: pointer;
+}
+```
+
 
 <div>
   <h2>Preview of the project</h2>
@@ -19,15 +26,17 @@ tags: [reactjs, portfolio]
   <p>So... let's begin building!</p>
 </div>
 
+## Create a React app and install needed libraries
+Let's begin by creating a create-react-app and starting the server
+
+```shell
+    $ npx create-react-app machine-learning
+```
+
+Let's begin by creating a create-react-app and starting the server
+After the app is installed, let's go in the folder and start the server
+
 <div>
-  <h2>Create a React app and install needed libraries</h2>
-  <p>Let's begin by creating a create-react-app and starting the server</p>
-  <code>
-    <div class="terminal">
-        $ npx create-react-app machine-learning
-    </div>
-  </code>
-  <p>After the app is installed, let's go in the folder and start the server</p>
   <code>
     <div class="terminal">
         $ cd machine-learning <br>
