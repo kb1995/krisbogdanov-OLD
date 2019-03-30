@@ -1,0 +1,95 @@
+html, body {
+  font-size: 16px;
+  font-family: proxima-nova,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 24px;
+  -webkit-font-smoothing: antialiased;
+}
+
+// Font size
+
+h1 {
+  font-size: 60px;
+  line-height: 65px;
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 48px;
+}
+
+h3 {
+  font-size: 30px;
+  line-height: 22px;
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 22px;
+}
+
+h5 {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+h6 {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+
+// Font weight
+
+b, strong, h1, h2 {
+  font-weight: 700;
+}
+
+h3, h4{
+  font-weight: 600;
+}
+
+h5, h6{
+  font-weight: 500;
+}
+
+// Links
+
+a{
+  text-decoration: none;
+  color: $text-color;
+  &:hover{
+    color: $primary;
+  }
+
+  &.no-underline{
+    text-decoration: none;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+}
+
+// Mobile
+@media (max-width: 700px) {
+
+  html, body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  h2 {
+    font-size: 28px;
+    line-height: 42px;
+  }
+
+  h3 {
+    font-size: 25px;
+    line-height: 30px;
+  }
+}

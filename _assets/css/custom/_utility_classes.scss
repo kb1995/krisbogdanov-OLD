@@ -1,17 +1,15 @@
-.h-25-vh{
-  min-height: 25vh;
+// Sizing
+
+.h-auto{
+  height: auto;
 }
 
-.h-50-vh{
-  min-height: 50vh;
-}
-
-.h-75-vh{
-  min-height: 75vh;
-}
-
-.h-100-vh{
+.h-min-100-vh{
   min-height: 100vh;
+}
+
+.w-150{
+  width: 150%;
 }
 
 // hr width classes
@@ -29,6 +27,21 @@
 
 .hr-w-100{
   width: 100%;
+}
+
+// object fit
+
+.object-fit-cover{
+  object-fit: cover;
+}
+
+.object-fit-contain{
+  object-fit: cover;
+}
+
+.no-padding{
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .text-center-children{
@@ -58,13 +71,6 @@
   }
 }
 
-// TODO change name of this class
-.bg-test{
-  background: #1c92d2;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #f2fcfe, #1c92d2);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #f2fcfe, #1c92d2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
 .rounded-2{
   border-radius: 2rem;
 }
@@ -75,8 +81,4 @@
   &:hover{
     transform: translateY(-4px);
   }
-}
-
-.bg-content{
-  background-color: hsla(10,10%,15%,0.8);
 }

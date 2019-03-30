@@ -2,9 +2,15 @@
 <html lang="en">
   {% include head.html %}
   <body>
-    <div class="">
-      {% include header-blog.html %}
-      <div class="" style="background: linear-gradient( rgba(0, 0, 0, 0.50 ), rgba(0, 0, 0, 0.50)), url({% asset "{{ page.image }}" @path %});
+    <div>
+      {% include header.html %}
+      <div class="w-50 mx-auto mt-3 container">
+        <div class="text-center-children">
+          <h1 class="main-title">{{ page.title }}</h1>
+          <h4 class="w-75 mx-auto text-muted subtitle">{{ page.subtitle }}</h4>
+        </div>
+      </div>
+      <div style="background: linear-gradient( rgba(0, 0, 0, 0.10 ), rgba(0, 0, 0, 0.10)), url({% asset "{{ page.image }}" @path %});
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -13,18 +19,16 @@
       </div>
       <div class="blog-main-wrapper mt-3 mb-5 container">
         <div class="text-center-children">
-          <h4 class="text-muted text-center date">{{ page.date | timeago }}</h4>
-          <h1 class="main-title">{{ page.title }}</h1>
-          <h3 class="text-muted subtitle">{{ page.subtitle }}</h3>
           <div>
             {% if page.tags.size > 0 %}
-              <div class="tag-wrapper">
+              <div class="d-flex justify-content-center flex-wrap">
                 {% for tag in page.tags %}
                   <a class="mr-3" href = "/tag/{{tag | replace: ' ', '-'}}">{{tag}}</a>
                 {%endfor %}
               </div>
             {% endif %}
           </div>
+          <h4 class="text-muted text-center date">{{ page.date | timeago }}</h4>
         </div>
 
         <hr class="hr-w-75">

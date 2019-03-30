@@ -2,7 +2,74 @@
 layout: default 
 ---
 
-<section>
+<main class="container">
+  <!-- Hero -->
+  <section style="height: 600px" class="hero h-min-100-vh">
+    <div class="row h-100">
+      <div class="col-lg-6">
+        <div style="margin-top: 100px; width: 90%;" class="">
+          <h1 style="font-size: 52px;">Hello, 👋 my name is Kris. I am a developer, maker and nomad.</h1>
+          {% assign post = site.posts.first %}
+          <a class="mt-5 d-flex align-items-center" href="{{ root_url }}{{ post.url }}">
+              <img class="mr-4" src="{% asset "hero-cta.svg" @path %}">
+              <h5>Read my latest article</h5>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-6">
+          <img style="left: -100px; z-index: -1" class="position-absolute w-150" src="{% asset "hero.svg" @path %}">
+      </div>
+    </div>
+  </section>
+  <!-- Features -->
+  <section>
+    <div class="row">
+      <div class="col-lg-6 d-flex flex-column align-items-center mb-4">
+          <img style="height: 250px" src="{% asset "landing-developer.svg" @path %}">
+          <h2 class="text-center mt-3">Full-stack developer</h2>
+          <p class="text-muted text-center w-50 mx-auto">I love making websites. My current stack is Ruby on Rails, as well as SCSS and StimulusJS for good measure. I learn fast though</p>
+      </div>
+      <div class="col-lg-6 d-flex flex-column align-items-center mb-4">
+          <img style="height: 250px" src="{% asset "landing-maker.svg" @path %}">
+          <h2 class="text-center mt-3">Maker</h2>
+          <p class="text-muted text-center w-50 mx-auto">Besides making products that solve problems, I also want to turn them into successful businesses</p>
+      </div>
+      <div class="col-lg-6 d-flex flex-column align-items-center mb-4">
+          <img style="height: 250px" src="{% asset "landing-nomads.svg" @path %}">
+          <h2 class="text-center mt-3">Digital nomad</h2>
+          <p class="text-muted text-center w-50 mx-auto">My girlfriend and I travel the world, while working full-time for two amazing startups. Check my instagram, so many photos of my laptop</p>
+      </div>
+      <div class="col-lg-6 d-flex flex-column align-items-center mb-4">
+          <img style="height: 250px" src="{% asset "landing-books.svg" @path %}">
+          <h2 class="text-center mt-3">Blogger</h2>
+          <p class="text-muted text-center w-50 mx-auto">Great content is a great passion of mine. In my blog, you can find articles about being a self-taught developer, my upcoming products and working full-time while travelling</p>
+      </div>
+    </div>
+  </section>
+  <!-- Recent articles -->
+  <section>
+    <p>Recent articles</p>
+    {% for post in site.posts limit:2 %}
+      <div class="d-flex mb-3" style="height:300px;">
+        <img class="h-100 w-25 mr-5 object-fit-cover rounded" src="{% asset "{{ post.image }}" @path %}">
+        <div>
+          <h2>{{ post.title }}</h2>
+          <h5 class="text-muted">{{ post.subtitle }}</h5>
+          <a class="btn btn-primary px-4" href="{{ post.url }}">Read more</a>
+        </div>
+      </div>
+    {% endfor %}
+    <a class="btn btn-primary" href="/blog">View all articles</a>
+  </section>
+  <!-- Get in touch -->
+  <section>
+    <div>
+      
+    </div>
+  </section>
+</main>
+
+<!-- <section>
   {% include header.html %}
   <div class="container">
     <div class="h-100-vh">
@@ -76,4 +143,4 @@ layout: default
       </div>
     </div>
   </div>
-</section>
+</section> -->
