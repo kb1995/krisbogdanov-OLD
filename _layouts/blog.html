@@ -4,7 +4,7 @@
   <body>
     <div>
       {% include header.html %}
-      <div class="w-50 mx-auto mt-3 container">
+      <div class="w-50 mx-auto my-5 container">
         <div class="text-center-children">
           <h1 class="main-title">{{ page.title }}</h1>
           <h4 class="w-75 mx-auto text-muted subtitle">{{ page.subtitle }}</h4>
@@ -21,18 +21,18 @@
         <div class="text-center-children">
           <div>
             {% if page.tags.size > 0 %}
-              <div class="d-flex justify-content-center flex-wrap">
+              <div class="mb-3">
                 {% for tag in page.tags %}
-                  <a class="mr-3" href = "/tag/{{tag | replace: ' ', '-'}}">{{tag}}</a>
+                  <a class="" href = "/tag/{{tag | replace: ' ', '-'}}">{{tag}}</a>
+                  {% if forloop.last == false %}
+                    <span>/</span>
+                  {% endif %}
                 {%endfor %}
               </div>
             {% endif %}
           </div>
-          <h4 class="text-muted text-center date">{{ page.date | timeago }}</h4>
+          <h5 class="text-muted text-center mb-5">{{ page.date | timeago }}</h5>
         </div>
-
-        <hr class="hr-w-75">
-
         <section>
           <div class="blog-content-wrapper">
             <div>

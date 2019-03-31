@@ -3,6 +3,7 @@
 
 @charset 'UTF-8';
 
+@import "./custom/_variables.scss";
 @import './custom/utility_classes';
 
 // import bootstrap
@@ -21,21 +22,11 @@
 
 
 #mc_embed_signup{
-  background: hsla(0,0%,80%,0.2);
+  background: $primary-4;
   padding: 25px;
   box-shadow: 0 1px 4px hsla(0,0%,20%,0.2);
   clear:left; 
   width:100%;
-  max-width: 750px;
-
-  label{
-    font-size: 26px;
-    padding: 0;
-  }
-
-  p{
-    font-size: 18px;
-  }
 
   input.email{
     font-size: 20px;
@@ -53,7 +44,7 @@
   }
   .clear{
     .button{
-      background-color: #ad1414;
+      background-color: $primary;
       width: 155px;
       height: 45px;
       font-size: 20px;

@@ -1,13 +1,15 @@
 <nav class="header navbar navbar-expand-md py-4 sticky-top bg-white">
   <div class="container">
-    <a href="{{ site.baseurl }}/" class="navbar-brand no-decoration">
-      <h5 class="d-inline align-middle pl-3">Kris Bogdanov</h5>
+    <a href="{{ site.baseurl }}/" class="navbar-brand no-decoration no-padding">
+      <h5 class="d-inline align-middle">Kris Bogdanov</h5>
     </a>
     <div class="justify-content-end">
       <ul class="navbar-nav">
-        <li class="nav-item mr-3">
-          <a class="no-decoration" href="/">Home</a>
-        </li>
+        {% if page.url != "/" %}
+          <li class="nav-item mr-3">
+            <a class="no-decoration" href="/">Home</a>
+          </li>
+        {% endif %}
         {% assign sorted_pages = site.pages | sort:"order" %}
         {% for page in sorted_pages | sort:"order" %}
         {% if page.title %}
