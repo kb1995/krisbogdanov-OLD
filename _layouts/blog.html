@@ -10,12 +10,13 @@
           <h4 class="w-75 mx-auto text-muted subtitle">{{ page.subtitle }}</h4>
         </div>
       </div>
-      <div style="background: linear-gradient( rgba(0, 0, 0, 0.10 ), rgba(0, 0, 0, 0.10)), url({% asset "{{ page.image }}" @path %});
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      height: 450px;
-      ">
+      <div class="overflow-hidden">
+        <div class="blog-main-image" style="background: linear-gradient( rgba(0, 0, 0, 0.10 ), rgba(0, 0, 0, 0.10)), url({% asset "{{ page.image }}" @path %});
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 500px;
+        "></div>
       </div>
       <div class="blog-main-wrapper mt-3 mb-5 container">
         <div class="text-center-children">

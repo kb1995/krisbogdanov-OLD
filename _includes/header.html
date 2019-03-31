@@ -1,7 +1,7 @@
 <nav class="header navbar navbar-expand-md py-4 sticky-top bg-white">
   <div class="container">
     <a href="{{ site.baseurl }}/" class="navbar-brand no-decoration no-padding">
-      <h5 class="d-inline align-middle">Kris Bogdanov</h5>
+      <h5 class="d-inline align-middle font-weight-bold">Kris Bogdanov</h5>
     </a>
     <div class="justify-content-end">
       <ul class="navbar-nav">
@@ -11,12 +11,18 @@
           </li>
         {% endif %}
         {% assign sorted_pages = site.pages | sort:"order" %}
-        {% for page in sorted_pages | sort:"order" %}
-        {% if page.title %}
-        <li class="nav-item mr-3">
-         <a class="no-decoration" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-        </li>
-        {% endif %}
+        {% for node in sorted_pages | sort:"order" %}
+          {% if node.title %}
+            {% if node.url == page.url %}
+              <li class="nav-item mr-3">
+                <a class="no-decoration font-weight-bold" href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
+              </li>
+              {% else %}
+              <li class="nav-item mr-3">
+                <a class="no-decoration" href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
+              </li>
+            {% endif %}
+          {% endif %}
         {% endfor %}
       </ul>
     </div>
