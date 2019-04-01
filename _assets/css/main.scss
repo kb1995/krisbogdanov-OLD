@@ -4,10 +4,12 @@
 @charset 'UTF-8';
 
 @import "./custom/_variables.scss";
-@import './custom/utility_classes';
 
 // import bootstrap
 @import 'bootstrap/bootstrap';
+
+// utility classes
+@import './custom/utility_classes';
 
 // includes
 @import 'custom/includes/header';

@@ -45,111 +45,32 @@ layout: default
   </section>
   <!-- Recent articles -->
   <section class="mt-5">
-    <h3 class="mb-4">Recent articles</h3>
+    <h2 class="mb-4">Recent articles</h2>
     {% for post in site.posts limit:2 %}
       <div class="row mb-3" style="height:300px;">
         <div class="col-lg-4">
-          <img class="h-100 w-100 mr-5 object-fit-cover rounded-2" src="{% asset "{{ post.image }}" @path %}">
+          <img class="h-100 w-100 mr-5 object-fit-cover rounded-3" src="{% asset "{{ post.image }}" @path %}">
         </div>
         <div class="col-lg-6">
           <h2>{{ post.title }}</h2>
           <h5 class="text-muted">{{ post.subtitle }}</h5>
-          <a class="btn btn-primary px-4 mt-3" href="{{ post.url }}">Read more</a>
+          <a class="btn btn-outline-primary px-4 mt-3" href="{{ post.url }}">Read more</a>
         </div>
       </div>
     {% endfor %}
-    <a class="btn btn-primary" href="/blog">View all articles</a>
+    <a class="btn btn-primary font-size-6 px-4 mt-4 box-shadow-3" href="/blog">View all articles</a>
   </section>
   <!-- Get in touch -->
   <section>
-    <div style="height: 300px" class="rounded-2 w-100 bg-primary-4 my-5">
-      <div class="row justify-content-center align-items-center h-100">
-        <div class="col-lg-6">
-          <div class="w-75 mx-auto">
-            <h2>Get in touch</h2>
-            <h5 class="text-muted">No matter the reason, you are always welcome to email me!</h5>
-          </div>
+    <div class="rounded-3 w-50 mx-auto bg-primary-4 my-5 p-5 position-relative overflow-hidden">
+        <img style="height: 100px; bottom: 20px; left: 60px; transform: rotate(-20deg);" class="position-absolute" src="{% asset "landing-contact.svg" @path %}">
+        <div class="mb-3">
+          <div class="font-size-2 text-center text-shadow-3 mb-3">Get in touch</div>
+          <div class="text-muted text-center font-size-6">No matter the reason, you are always welcome to email me!</div>
         </div>
-        <div class="col-lg-6 text-center">
-          <div class="btn btn-primary">Contact me</div>
+        <div class="text-center">
+          <a href="/contact" class="box-shadow-2 btn btn-primary font-size-5" >Say hey</a>
         </div>
-      </div>
     </div>
   </section>
 </main>
-
-<!-- <section>
-  {% include header.html %}
-  <div class="container">
-    <div class="h-100-vh">
-      <div class="row">
-        <div class="col-12 my-3 my-lg-5 d-flex flex-column flex-lg-row text-left text-lg-center justify-content-around">
-          <h3 class="phrase design"><span>💡</span> &nbsp; Design</h3>
-          <h3 class="phrase build"><span>🚧</span> &nbsp; Build</h3>
-          <h3 class="phrase ship"><span>🛳</span> &nbsp; Ship</h3>
-        </div>
-        <div class="col-12 text-center hero-text">
-          <h1 class="main">Hi, my name is Kris</h1>
-          <h4 class="submain">A software developer that loves coding and making stuff</h4>
-        </div>
-        <div class="col-12 my-5">
-          <div class="row">
-            <div class="col-lg-6">
-              <h2 class="mb-5">Projects</h2>
-              <div class="grid">
-                {% for post in site.posts %}
-                  {% if post.category == "project" %}
-                  <a class="no-decoration" href="{{ post.url }}">
-                      <div class="item rounded-2 p-4 item-hover box-shadow d-flex justify-content-center align-items-center" style="background: linear-gradient( rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url({% asset "{{ post.image }}" @path %});
-                      background-repeat: no-repeat;
-                      background-size: cover;
-                      background-position: center;">
-                      <div class="text-center">
-                        <h4>{{post.title}}</h4>
-                        <p>{{post.subtitle}}</p>
-                      </div>
-                    </div>
-                  </a>
-                  {% endif %}
-                {% endfor %}
-              </div>
-            </div>
-            <div class="col-lg-6 mt-5 mt-lg-0">
-              <h2 class="mb-5">Content and Social Media</h2>
-              <div class="grid">
-                <a class="no-decoration" href="/blog">
-                  <div class="item item-hover rounded-2 px-4 pt-4 mb-5 mb-lg-4 bg-content box-shadow position-relative">
-                    <i class="icon-absolute ml-4 fas fa-marker"></i>
-                    <h4>Blog</h4>
-                    <p>Writing about everything, but a lot of personal growth and software development.</p>
-                  </div>
-                </a>
-                <a class="no-decoration" href="https://twitter.com/kris_bogdanov" target="_blank">
-                  <div class="item item-hover rounded-2 px-4 pt-4 mb-5 mb-lg-4 bg-content box-shadow">
-                    <i class="icon-absolute ml-4 fab fa-twitter"></i>
-                    <h4>Twitter</h4>
-                    <p>Transparent view of being a self-taught software developer and inspiring maker.</p>
-                  </div>
-                </a>
-                <a class="no-decoration" href="https://github.com/kb1995" target="_blank">
-                  <div class="item item-hover rounded-2 px-4 pt-4 mb-5 mb-lg-4 bg-content box-shadow">
-                    <i class="icon-absolute ml-4 fab fa-github"></i>
-                    <h4>Github</h4>
-                    <p>No secrets - every line of code is here for you to see. All projects are open sourced.</p>
-                  </div>
-                </a>
-                <a class="no-decoration" href="https://www.linkedin.com/in/kris-bogdanov/" target="_blank">
-                  <div class="item item-hover rounded-2 px-4 pt-4 mb-5 mb-lg-4 bg-content box-shadow">
-                    <i class="icon-absolute ml-4 fab fa-linkedin-in"></i>
-                    <h4>Linkedin</h4>
-                    <p>Have we met somewhere? Want to get in touch with me? Let's connect on Linkedin.</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
