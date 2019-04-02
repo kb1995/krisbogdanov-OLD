@@ -45,9 +45,11 @@ layout: default
   </section>
   <!-- Recent articles -->
   <section class="mt-5">
-    <h2 class="mb-4">Recent articles</h2>
+    <div class="row justify-content-center">
+      <h2 class="mb-4 col-lg-10">Recent articles</h2>
+    </div>
     {% for post in site.posts limit:2 %}
-      <div class="row mb-3 recent-article">
+      <div class="row mb-3 recent-article justify-content-center">
         <div class="col-lg-4">
           <img class="h-100 w-100 mr-5 object-fit-cover rounded-3" src="{% asset "{{ post.image }}" @path %}">
         </div>
@@ -58,7 +60,7 @@ layout: default
         </div>
       </div>
     {% endfor %}
-    <div class="d-flex justify-content-center justify-content-lg-start">
+    <div class="d-flex justify-content-center">
       <a class="btn btn-primary font-size-6 px-4 mt-4 box-shadow-3" href="/blog">View all articles</a>
     </div>
   </section>
