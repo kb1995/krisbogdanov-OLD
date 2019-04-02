@@ -78,6 +78,15 @@
   }
 }
 
+.feature-image{
+  height: auto;
+  width: 100%;
+  @include media-breakpoint-up(lg) { 
+    height: 250px;
+    width: initial;
+  }
+}
+
 .contact-phone-icon{
   height: 70px;
   @include media-breakpoint-up(lg) { 
