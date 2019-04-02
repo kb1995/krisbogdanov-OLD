@@ -54,3 +54,33 @@
     }
   }
 }
+
+// landing
+.hero{
+  height: auto;
+
+  @include media-breakpoint-up(lg) { 
+    height: 600px;
+  }
+
+  .hero-image{
+    height: 400px;
+    @include media-breakpoint-up(lg){
+      height: inherit;
+    }
+  }
+}
+
+.recent-article{
+  height: auto;
+  @include media-breakpoint-up(lg) { 
+    height: 300px;
+  }
+}
+
+.contact-phone-icon{
+  height: 70px;
+  @include media-breakpoint-up(lg) { 
+    height: 100px;
+  }
+}
