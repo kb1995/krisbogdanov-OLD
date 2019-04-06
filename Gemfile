@@ -8,7 +8,7 @@ group :jekyll_plugins do
   gem 'jekyll-assets', '~> 3'
   gem 'jekyll-feed', '~> 0.6'
   gem 'jekyll-sitemap', '~> 1.1'
-  gem 'jekyll-paginate-v2', '~> 2.1'
+  gem 'jekyll-paginate-v2', '~> 2.0'
   gem 'jekyll-tagging', '~> 1.1'
   gem 'jekyll-timeago', '~> 0.12.3'
 end
