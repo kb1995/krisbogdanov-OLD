@@ -13,8 +13,8 @@ layout: default
           <a style="font-size:22px;" class="mt-3 btn btn-primary px-4" href="{{ root_url }}{{ post.url }}">Read my latest article</a>
         </div>
       </div>
-      <div class="col-lg-6 hero-image mt-4 mt-lg-0">
-          <img style="left: -100px; z-index: -1" class="position-absolute w-150" src="{% asset "hero.svg" @path %}">
+      <div class="col-lg-6 hero-image mt-4 mt-lg-0 d-flex justify-content-center mb-4 mb-lg-0">
+          <img style="left: -100px; z-index: -1" class="position-lg-absolute w-150" src="{% asset "hero.svg" @path %}">
       </div>
     </div>
   </section>
@@ -49,11 +49,11 @@ layout: default
       <h2 class="mb-4 col-lg-10">Recent articles</h2>
     </div>
     {% for post in site.posts limit:2 %}
-      <div class="row mb-3 recent-article justify-content-center">
+      <div class="row mb-4 mb-lg-3 recent-article justify-content-center">
         <div class="col-lg-4">
           <img class="h-100 w-100 mr-5 object-fit-cover rounded-3" src="{% asset "{{ post.image }}" @path %}">
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 mt-3 mt-lg-0">
           <h2>{{ post.title }}</h2>
           <h5 class="text-muted">{{ post.subtitle }}</h5>
           <a class="btn btn-outline-primary px-4 mt-3" href="{{ post.url }}">Read more</a>
