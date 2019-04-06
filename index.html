@@ -2,78 +2,79 @@
 layout: default 
 ---
 
-<section>
-  {% include header.html %}
-  <div class="container">
-    <div class="h-100-vh">
-      <div class="row">
-        <div class="col-12 my-3 my-lg-5 d-flex flex-column flex-lg-row text-left text-lg-center justify-content-around">
-          <h3 class="phrase design"><span>💡</span> &nbsp; Design</h3>
-          <h3 class="phrase build"><span>🚧</span> &nbsp; Build</h3>
-          <h3 class="phrase ship"><span>🛳</span> &nbsp; Ship</h3>
-        </div>
-        <div class="col-12 text-center hero-text">
-          <h1 class="main">Hi, my name is Kris</h1>
-          <h4 class="submain">A software developer that loves coding and making stuff</h4>
-        </div>
-        <div class="col-12 my-5">
-          <div class="row">
-            <div class="col-lg-6">
-              <h2 class="mb-5">Projects</h2>
-              <div class="grid">
-                {% for post in site.posts %}
-                  {% if post.category == "project" %}
-                  <a class="no-decoration" href="{{ post.url }}">
-                      <div class="item rounded-2 p-4 item-hover box-shadow d-flex justify-content-center align-items-center" style="background: linear-gradient( rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url({% asset "{{ post.image }}" @path %});
-                      background-repeat: no-repeat;
-                      background-size: cover;
-                      background-position: center;">
-                      <div class="text-center">
-                        <h4>{{post.title}}</h4>
-                        <p>{{post.subtitle}}</p>
-                      </div>
-                    </div>
-                  </a>
-                  {% endif %}
-                {% endfor %}
-              </div>
-            </div>
-            <div class="col-lg-6 mt-5 mt-lg-0">
-              <h2 class="mb-5">Content and Social Media</h2>
-              <div class="grid">
-                <a class="no-decoration" href="/blog">
-                  <div class="item item-hover rounded-2 px-4 pt-4 mb-5 mb-lg-4 bg-content box-shadow position-relative">
-                    <i class="icon-absolute ml-4 fas fa-marker"></i>
-                    <h4>Blog</h4>
-                    <p>Writing about everything, but a lot of personal growth and software development.</p>
-                  </div>
-                </a>
-                <a class="no-decoration" href="https://twitter.com/kris_bogdanov" target="_blank">
-                  <div class="item item-hover rounded-2 px-4 pt-4 mb-5 mb-lg-4 bg-content box-shadow">
-                    <i class="icon-absolute ml-4 fab fa-twitter"></i>
-                    <h4>Twitter</h4>
-                    <p>Transparent view of being a self-taught software developer and inspiring maker.</p>
-                  </div>
-                </a>
-                <a class="no-decoration" href="https://github.com/kb1995" target="_blank">
-                  <div class="item item-hover rounded-2 px-4 pt-4 mb-5 mb-lg-4 bg-content box-shadow">
-                    <i class="icon-absolute ml-4 fab fa-github"></i>
-                    <h4>Github</h4>
-                    <p>No secrets - every line of code is here for you to see. All projects are open sourced.</p>
-                  </div>
-                </a>
-                <a class="no-decoration" href="https://www.linkedin.com/in/kris-bogdanov/" target="_blank">
-                  <div class="item item-hover rounded-2 px-4 pt-4 mb-5 mb-lg-4 bg-content box-shadow">
-                    <i class="icon-absolute ml-4 fab fa-linkedin-in"></i>
-                    <h4>Linkedin</h4>
-                    <p>Have we met somewhere? Want to get in touch with me? Let's connect on Linkedin.</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
+<main class="container">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="row h-100">
+      <div class="col-lg-6">
+        <div style="width: 90%;" class="mt-5 mt-lg-7">
+          <h1 style="font-size: 52px;">Hello, 👋 my name is Kris. I am a developer, maker and nomad.</h1>
+          {% assign post = site.posts.first %}
+          <a style="font-size:22px;" class="mt-3 btn btn-primary px-4" href="{{ root_url }}{{ post.url }}">Read my latest article</a>
         </div>
       </div>
+      <div class="col-lg-6 hero-image mt-4 mt-lg-0 d-flex justify-content-center mb-4 mb-lg-0">
+          <img style="left: -100px; z-index: -1" class="position-lg-absolute w-150" src="{% asset "hero.svg" @path %}">
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+  <!-- Features -->
+  <section>
+    <div class="row">
+      <div class="col-lg-6 d-flex flex-column align-items-center mb-4">
+          <img class="feature-image" src="{% asset "landing-developer.svg" @path %}">
+          <h2 class="text-center mt-3">Full-stack developer</h2>
+          <p class="text-muted text-center font-size-6 w-lg-50 w-75 mx-auto">I work as a Web Developer at <a class="link" href="https://wearewildgoose.com/uk/" target="_blank" rel="noopener noreferrer">Wildgoose</a>. My current stack is mainly Ruby on Rails, SCSS and StimulusJS. I learn fast though.</p>
+      </div>
+      <div class="col-lg-6 d-flex flex-column align-items-center mb-4">
+          <img class="feature-image" src="{% asset "landing-maker.svg" @path %}">
+          <h2 class="text-center mt-3">Maker</h2>
+          <p class="text-muted text-center font-size-6 w-lg-50 w-75 mx-auto">Besides making products that solve problems, I also strive to turn them into successful businesses.</p>
+      </div>
+      <div class="col-lg-6 d-flex flex-column align-items-center mb-4">
+          <img class="feature-image" src="{% asset "landing-nomads.svg" @path %}">
+          <h2 class="text-center mt-3">Digital nomad</h2>
+          <p class="text-muted text-center font-size-6 w-lg-50 w-75 mx-auto">My girlfriend and I travel the world, while working full-time for two amazing startups. You can find plenty of photos of my laptop on <a class="link" href="https://www.instagram.com/kris_bogdanov/" target="_blank" rel="noopener noreferrer">Instagram</a>.</p>
+      </div>
+      <div class="col-lg-6 d-flex flex-column align-items-center mb-4">
+          <img class="feature-image" src="{% asset "landing-books.svg" @path %}">
+          <h2 class="text-center mt-3">Blogger</h2>
+          <p class="text-muted text-center font-size-6 w-lg-50 w-75 mx-auto">In my <a class="link" href="/blog">blog</a>, you can find articles about being self-taught developer, my upcoming products and working full-time while travelling.</p>
+      </div>
+    </div>
+  </section>
+  <!-- Recent articles -->
+  <section class="mt-5">
+    <div class="row justify-content-center">
+      <h2 class="mb-4 col-lg-10">Recent articles</h2>
+    </div>
+    {% for post in site.posts limit:2 %}
+      <div class="row mb-4 mb-lg-3 recent-article justify-content-center">
+        <div class="col-lg-4">
+          <img class="h-100 w-100 mr-5 object-fit-cover rounded-3" src="{% asset "{{ post.image }}" @path %}">
+        </div>
+        <div class="col-lg-6 mt-3 mt-lg-0">
+          <h2>{{ post.title }}</h2>
+          <h5 class="text-muted">{{ post.subtitle }}</h5>
+          <a class="btn btn-outline-primary px-4 mt-3" href="{{ post.url }}">Read more</a>
+        </div>
+      </div>
+    {% endfor %}
+    <div class="d-flex justify-content-center">
+      <a class="btn btn-primary font-size-6 px-4 mt-4 box-shadow-3" href="/blog">View all articles</a>
+    </div>
+  </section>
+  <!-- Get in touch -->
+  <section>
+    <div class="rounded-3 w-100 w-lg-50 mx-auto bg-primary-4 my-5 p-5 position-relative overflow-hidden">
+        <img style="bottom: 20px; left: 60px; transform: rotate(-20deg);" class="position-absolute contact-phone-icon" src="{% asset "landing-contact.svg" @path %}">
+        <div class="mb-3">
+          <div class="font-size-2 text-center text-shadow-3 mb-3 line-height-3">Get in touch</div>
+          <div class="text-muted text-center font-size-6">No matter the reason, you are always welcome to email me!</div>
+        </div>
+        <div class="text-center">
+          <a href="/contact" class="box-shadow-2 btn btn-primary font-size-5" >Say hey</a>
+        </div>
+    </div>
+  </section>
+</main>

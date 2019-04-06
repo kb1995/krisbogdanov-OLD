@@ -1,4 +1,4 @@
-console.log("Welcome to my personal website!")
+console.log("If you are reading this, we should probably chat. Drop me an email from the contact page.")
 
 // grab an element
 var myElement = document.querySelector(".header");
@@ -8,12 +8,5 @@ var headroom  = new Headroom(myElement, {
 });
 // initialise
 headroom.init(); 
-
-ScrollReveal().reveal('.phrase',{
-  delay: 0,
-  distance: '50px',
-  duration: 1500,
-  origin: "top"
-})
 
 

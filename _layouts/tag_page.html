@@ -2,32 +2,34 @@
 <html lang="en">
   {% include head.html %}
   <body>
-    {% include header.html %}
-    <div class="text-center my-4">
-      <h1>{{ page.tag | capitalize }}</h1>
-    </div>
-    
-    <section class="blog-wrapper">
-        <div class="container">
-          <div class="row d-flex justify-content-center">
-            {% for post in page.posts %}
-              <div class="col-12 my-3">
-                <a class="no-decoration" href="{{ post.url }}">
-                  <div class="d-flex rounded-2 box-shadow justify-content-center flex-column align-items-center article-wrapper" style="background: linear-gradient( rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url({% asset "{{ post.image }}" @path %});
-                  background-repeat: no-repeat;
-                  background-size: cover;
-                  background-position: center;">
-                    <h2>{{ post.title }}</h2>
-                    <h5 class="d-none d-lg-inline text-muted">{{ post.subtitle }}</h5>
-                    <p class="text-muted">{{ post.date | timeago }}</p>
-                  </div>
-                </a>
-              </div>
-            {% endfor %}
-          </div>
+    <div class="h-min-100-vh position-relative">
+      <div style="padding-bottom:50px">
+        {% include header.html %}
+        <div class="text-center my-4">
+          <h1>{{ page.tag | capitalize }}</h1>
         </div>
-      </section>
-
-    {% include footer.html %}
+        <section class="blog-wrapper">
+            <div class="container">
+              <div class="row d-flex justify-content-center">
+                {% for post in page.posts %}
+                  <div class="col-12 my-3">
+                    <a class="no-decoration" href="{{ post.url }}">
+                      <div class="d-flex rounded-2 box-shadow justify-content-center flex-column align-items-center article-wrapper" style="background: linear-gradient( rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url({% asset "{{ post.image }}" @path %});
+                      background-repeat: no-repeat;
+                      background-size: cover;
+                      background-position: center;">
+                        <h2>{{ post.title }}</h2>
+                        <h5 class="d-none d-lg-inline text-muted">{{ post.subtitle }}</h5>
+                        <p class="text-muted">{{ post.date | timeago }}</p>
+                      </div>
+                    </a>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          </section>
+      </div>
+      {% include footer.html %}
+    </div>
   </body>
 </html>

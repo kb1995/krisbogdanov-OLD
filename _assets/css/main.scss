@@ -3,46 +3,31 @@
 
 @charset 'UTF-8';
 
-@import './custom/custom_classes';
-
-@import 'syntax';
+@import "./custom/_variables.scss";
 
 // import bootstrap
 @import 'bootstrap/bootstrap';
+
+// utility classes
+@import './custom/utility_classes';
 
 // includes
 @import 'custom/includes/header';
 
 // pages
-@import 'custom/pages/index';
 @import 'custom/pages/blog';
 
-html {
-  font-size: 14px;
-}
+// font
+@import './custom/_font.scss';
 
-@include media-breakpoint-up(lg) {
-  html {
-    font-size: 16px;
-  }
-}
+
 
 #mc_embed_signup{
-  background: hsla(0,0%,80%,0.2);
+  background: $primary-4;
   padding: 25px;
-  box-shadow: 0 1px 4px hsla(0,0%,20%,0.2);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
   clear:left; 
   width:100%;
-  max-width: 750px;
-
-  label{
-    font-size: 26px;
-    padding: 0;
-  }
-
-  p{
-    font-size: 18px;
-  }
 
   input.email{
     font-size: 20px;
@@ -60,7 +45,7 @@ html {
   }
   .clear{
     .button{
-      background-color: #ad1414;
+      background-color: $primary;
       width: 155px;
       height: 45px;
       font-size: 20px;
@@ -69,75 +54,41 @@ html {
   }
 }
 
-body{
-  font-family: proxima-nova,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
+// landing
+.hero{
+  height: auto;
 
-// font weights
-
-h1, h2{
-  font-weight: 700;
-}
-
-h3, h4{
-  font-weight: 600
-}
-
-h5{
-  font-weight: 500;
-}
-
-b{
-  font-weight: 700;
-}
-
-a.no-decoration{
- text-decoration: none;
- color: #333;
- transition: color 0.2 ease-in-out;
- &:hover{
-   text-decoration: none;
-   color: black;
- } 
-}
-
-a.no-underline{
-  text-decoration: none;
-  a:hover{
-    text-decoration: none;
+  @include media-breakpoint-up(lg) { 
+    height: 600px;
   }
-}
 
-.no-padding{
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-.page-404{
-  color: white;
-  .error-404{
-    position: relative;
-    font-size: 18px;
-    font-weight: 200;
-    &::after{
-      content: '';
-      position: absolute;
-      bottom: -3px;
-      left: 0;
-      background-color: white;
-      height: 2px;
-      width: 15px;
-    }
-  }
-  h1{
-    font-size: 3.5rem;
-  }
-  @include media-breakpoint-down(xs) {
-    h1{
-      font-size: 2.5rem;
+  .hero-image{
+    height: 400px;
+    @include media-breakpoint-up(lg){
+      height: inherit;
     }
   }
 }
 
+.recent-article{
+  height: auto;
+  @include media-breakpoint-up(lg) { 
+    height: 300px;
+  }
+}
+
+.feature-image{
+  height: auto;
+  width: 100%;
+  @include media-breakpoint-up(lg) { 
+    height: 250px;
+    width: initial;
+  }
+}
+
+.contact-phone-icon{
+  height: 70px;
+  @include media-breakpoint-up(lg) { 
+    height: 100px;
+  }
+}

@@ -3,12 +3,14 @@ layout: default
 title: Blog 
 permalink: /blog/ 
 order: 1
-icon: fas fa-list
 ---
 
 <section class="blog-wrapper pb-5">
-  {% include header.html %}
   <div class="container">
+    <div class="text-center">
+      <h2>Blog</h2>
+      <p class="text-muted font-size-6 w-75 mx-auto">Writing about everything, but mostly about being a self-taught developer, personal growth, making products and digital nomadism.</p>
+    </div>
     <div class="row d-flex justify-content-center">
       {% for post in site.posts %}
         {% assign mod = forloop.index | modulo: 2 %}
@@ -17,8 +19,8 @@ icon: fas fa-list
         {% else %}
           <div class="col-lg-6 col-12 my-3">
         {% endif %}
-          <a class="no-decoration" href="{{ post.url }}">
-            <div class="text-center-children rounded-2 d-flex item-hover box-shadow justify-content-center flex-column align-items-center article-wrapper p-3" style="background: linear-gradient( rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)), url({% asset "{{ post.image }}" @path %});
+          <a class="no-underline" href="{{ post.url }}">
+            <div class="text-center-children rounded-3 d-flex item-hover box-shadow justify-content-center flex-column align-items-center article-wrapper p-3" style="background: linear-gradient( rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)), url({% asset "{{ post.image }}" @path %});
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;">
