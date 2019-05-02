@@ -10,3 +10,11 @@ category: test
 fewfewfwefwef
 
 **helooo**
+
+****
+
+* **1**
+* **2**
+* **3**
+
+![](/cms/photo2.jpeg)
