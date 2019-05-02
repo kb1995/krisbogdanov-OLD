@@ -15,5 +15,19 @@
 </section>
 
 <!-- JS stuff -->
+<script src="//unpkg.com/spiritjs/dist/spirit.min.js" />
+<script src="https://unpkg.com/spiritjs/dist/spirit.js"></script>
 {% asset headroom.js %}
 {% asset application.js %}
+
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
