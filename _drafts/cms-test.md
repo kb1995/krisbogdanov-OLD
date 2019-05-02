@@ -1,0 +1,14 @@
+---
+layout: blog
+image: "/uploads/main.jpeg"
+title: cms test
+subtitle: testing
+permalink: "/testing"
+date: 2019-05-14 23:00:00 +0000
+category: testing
+tags:
+- '2'
+- '1'
+
+---
+this is a test
