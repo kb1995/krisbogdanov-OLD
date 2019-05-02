@@ -1,6 +1,6 @@
 ---
 layout: blog
-image: /images/cms_blog/photo1.jpeg
+image: /images/cms_blog/photo3.jpg
 title: this is a CMS test
 subtitle: this is a cms test
 permalink: testing
