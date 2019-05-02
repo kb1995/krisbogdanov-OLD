@@ -1,0 +1,18 @@
+---
+layout: blog
+image: uploads/graduation.jpeg
+title: test
+subtitle: test
+permalink: "/test"
+date: 2019-04-30 23:00:00 +0000
+category: ''
+tags: []
+
+---
+1. 1
+2. 2
+3. 3
+
+**fewfwefwef**
+
+!\[\]({% asset "uploads/graduation.jpeg" @path %})
