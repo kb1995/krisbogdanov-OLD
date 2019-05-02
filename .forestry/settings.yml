@@ -11,10 +11,10 @@ sections:
   label: Posts
   create: all
   new_doc_ext: md
-upload_dir: uploads
+upload_dir: assets
 public_path: "/uploads"
-front_matter_path: ''
-use_front_matter_path: false
+front_matter_path: "/uploads"
+use_front_matter_path: true
 file_template: ":filename:"
 build:
   preview_command: bundle exec jekyll build --drafts --unpublished --future -d _site
