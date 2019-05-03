@@ -21,4 +21,12 @@ headroom.init();
   timeline => timeline.play()
 )
 
+anime({
+  targets: '.message',
+  loop: true,
+  opacity: 1,
+  ease: 'easeInOutBack',
+  delay: anime.stagger(1000, {start: 500}),
+  direction: 'alternate'
+});
 
