@@ -1,6 +1,6 @@
 ---
 layout: blog
-image: ''
+image: uploads/graduation.jpeg
 title: I don't want to get a first class in my university degree
 subtitle: In my final year of my 4 year BSc Mathematics degree, and I just released
   that I don't want a first class
