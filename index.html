@@ -53,11 +53,12 @@ layout: default
   </section>
   <!-- Recent articles -->
   <section class="mt-5 container mx-lg-5">
-    <div class="row">
+    <div class="row px-3">
       <h2 class="mb-4">Recent articles</h2>
     </div>
     {% for post in site.posts limit:2 %}
-      <div class="row mb-4 mb-lg-3 recent-article justify-content-center">
+    <a href="{{ post.url }}" class="no-underline no-color-change">
+      <div class="row mb-4 mb-lg-3 recent-article p-3 rounded-2 justify-content-center">
         <div class="col-lg-4 overflow-hidden rounded-2 border h-200px h-lg-100">
           <img class="w-100 h-100 mr-5 object-fit-cover transform-scale-2" src="{% asset "{{ post.image }}" @path %}">
         </div>
@@ -65,12 +66,13 @@ layout: default
           <div class="w-100 w-lg-75">
             <h2>{{ post.title }}</h2>
             <h5 class="text-muted w-100 w-lg-75">{{ post.subtitle }}</h5>
-            <a class="btn btn-outline-primary px-4 mt-3" href="{{ post.url }}">Read more</a>
+            <div class="btn btn-outline-primary font-size-7 px-4 mt-3" href="">Read more</div>
           </div>
         </div>
       </div>
+    </a>
     {% endfor %}
-    <div class="row justify-content-center justify-content-lg-start">
+    <div class="row justify-content-center justify-content-lg-start px-3">
       <a class="btn btn-primary font-size-6 px-4 mt-4 box-shadow-3" href="/blog">View all articles</a>
     </div>
   </section>
