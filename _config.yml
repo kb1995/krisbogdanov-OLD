@@ -26,8 +26,6 @@ plugins:
   - jekyll-paginate-v2
   - jekyll-sitemap
 
-include: ["_pages"]
-
 jekyll_timeago:
   depth: 1
 
@@ -40,3 +38,5 @@ highlighter: rouge
 
 include: 
     - _redirects
+    - _pages
+    - _category
