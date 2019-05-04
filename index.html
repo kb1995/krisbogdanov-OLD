@@ -46,36 +46,38 @@ layout: default
           <img class="feature-image" src="{% asset "landing-books.svg" @path %}">
           <div>
             <h2 class="text-center mt-3">Blogger</h2>
-            <p class="text-muted text-center font-size-6 w-lg-50 w-75 mx-auto">In my <a class="link" href="/blog">blog</a>, you can find articles about being self-taught developer, my upcoming products and working full-time while travelling.</p>
+            <p class="text-muted text-center font-size-6 w-lg-50 w-75 mx-auto">I write <a class="link" href="/blog">articles</a> about being self-taught developer, my upcoming products, working full-time while travelling and everything else.</p>
           </div>
       </div>
     </div>
   </section>
   <!-- Recent articles -->
-  <section class="mt-5">
-    <div class="row justify-content-center">
-      <h2 class="mb-4 col-lg-10">Recent articles</h2>
+  <section class="mt-5 container mx-lg-5">
+    <div class="row">
+      <h2 class="mb-4">Recent articles</h2>
     </div>
     {% for post in site.posts limit:2 %}
       <div class="row mb-4 mb-lg-3 recent-article justify-content-center">
-        <div class="col-lg-4 mx-3 overflow-hidden rounded-2 border">
-          <img class="h-100 w-100 mr-5 object-fit-cover transform-scale-2" src="{% asset "{{ post.image }}" @path %}">
+        <div class="col-lg-4 overflow-hidden rounded-2 border h-200px h-lg-100">
+          <img class="w-100 h-100 mr-5 object-fit-cover transform-scale-2" src="{% asset "{{ post.image }}" @path %}">
         </div>
-        <div class="col-lg-6 mt-3 mt-lg-0">
-          <h2>{{ post.title }}</h2>
-          <h5 class="text-muted">{{ post.subtitle }}</h5>
-          <a class="btn btn-outline-primary px-4 mt-3" href="{{ post.url }}">Read more</a>
+        <div class="col-lg-8 mt-3 mt-lg-0 px-0 px-lg-3">
+          <div class="w-100 w-lg-75">
+            <h2>{{ post.title }}</h2>
+            <h5 class="text-muted w-100 w-lg-75">{{ post.subtitle }}</h5>
+            <a class="btn btn-outline-primary px-4 mt-3" href="{{ post.url }}">Read more</a>
+          </div>
         </div>
       </div>
     {% endfor %}
-    <div class="d-flex justify-content-center">
+    <div class="row justify-content-center justify-content-lg-start">
       <a class="btn btn-primary font-size-6 px-4 mt-4 box-shadow-3" href="/blog">View all articles</a>
     </div>
   </section>
   <!-- Get in touch -->
   <section>
-    <div class="rounded-3 w-100 w-lg-50 mx-auto bg-primary-4 my-5 p-5 position-relative overflow-hidden">
-        <svg style="bottom: 20px; left: 60px; transform: rotate(-20deg);" class="position-absolute contact-phone-icon" height="194" viewBox="0 0 148 194" width="148" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <div class="rounded-3 w-100 w-lg-50 mx-auto bg-primary-4 my-5 p-5 position-relative overflow-hidden box-shadow-4">
+        <svg style="bottom: 20px; left: 10px; transform: rotate(-20deg);" class="position-absolute contact-phone-icon" height="194" viewBox="0 0 148 194" width="148" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <mask id="a" fill="#fff">
               <path d="m0 193.800987h147.951v-193.800987h-147.951z" fill="#fff" fill-rule="evenodd" />
           </mask>
@@ -159,7 +161,7 @@ layout: default
           </g>
         </svg>
         <div class="mb-3">
-          <div class="font-size-2 text-center text-shadow-3 mb-3 line-height-3">Get in touch</div>
+          <div class="font-size-2 text-center mb-3 line-height-3">Get in touch</div>
           <div class="text-muted text-center font-size-6">No matter the reason, you are always welcome to email me!</div>
         </div>
         <div class="text-center">

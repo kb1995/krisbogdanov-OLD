@@ -33,12 +33,20 @@
   width: 100%;
 }
 
+.h-200px{
+  height: 200px;
+}
+
 @include media-breakpoint-up(lg) { 
   .w-lg-50{
     width: 50% !important;
   }
   .w-lg-75{
     width: 75% !important;
+  }
+
+  .h-lg-100{
+    height: 100% !important;
   }
 }
 
