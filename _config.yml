@@ -37,3 +37,6 @@ tag_permalink_style: pretty
 
 markdown: kramdown
 highlighter: rouge
+
+include: 
+    - _redirects
