@@ -2,8 +2,10 @@
   <title>
     {% if page.url == "/" %}
       {{ site.title }}
-    {% else %}
+    {% elsif page.title %}
       {{ page.title }} 	| {{ site.title }}
+      {% else %}
+      {{ page.tag | capitalize }} 	| {{ site.title }}
     {% endif %}
   </title>
 

@@ -6,12 +6,13 @@
       <div style="padding-bottom:50px">
         {% include header.html %}
         <div class="text-center my-4">
-          <h1>{{ page.tag | capitalize }}</h1>
+          <h2>{{ page.tag | capitalize }}</h2>
+          <p class="text-muted font-size-6 w-75 mx-auto">{{ page.subtitle | capitalize }}</p>
         </div>
         <section class="blog-wrapper">
             <div class="container">
               <div class="row d-flex justify-content-center">
-                {% for post in page.posts %}
+                {% for post in site.categories[page.tag] %}
                   <div class="col-12 my-3">
                     <a class="no-decoration no-underline" href="{{ post.url }}">
                       <div class="d-flex rounded-2 box-shadow item-hover justify-content-center flex-column align-items-center article-wrapper" style="background: linear-gradient( rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url({% asset "{{ post.image }}" @path %});
@@ -25,6 +26,9 @@
                     </a>
                   </div>
                 {% endfor %}
+                {% unless site.categories[page.tag].size %}
+                  <h3>Articles on this topic are coming soon 👀</h3>
+                {% endunless %}
               </div>
             </div>
           </section>

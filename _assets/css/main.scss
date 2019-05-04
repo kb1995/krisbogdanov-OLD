@@ -25,7 +25,7 @@
 #mc_embed_signup{
   background: $primary-4;
   padding: 25px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.2);
   clear:left; 
   width:100%;
 
@@ -73,10 +73,16 @@
 .recent-article{
   transition: all 0.25s ease;
   height: auto;
+  img{
+    transition: transform 0.25s ease;
+  }
   &:hover{
     box-shadow: 0 5px 15px 0 rgba(0,0,0,0.2);
     transform: translateY(-0.5rem);
     -webkit-transform: translateY(-0.5rem);
+    img{
+      transform: scale(1.55)
+    }
   }
   @include media-breakpoint-up(lg) { 
     height: 300px;
