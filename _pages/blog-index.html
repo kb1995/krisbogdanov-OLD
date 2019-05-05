@@ -9,7 +9,7 @@ order: 1
   <div class="container">
     <div class="text-center">
       <h2>Blog</h2>
-      <div class="d-flex justify-content-center mb-3">
+      <div class="d-flex justify-content-center mb-3 flex-wrap">
           {% assign sortedCategories = site.category | sort %}
           {% for category in sortedCategories %}
             <a href="{{ category.slug }}" class="mr-4 font-size-7">{{ category.tag }}</a>
