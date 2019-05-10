@@ -5,7 +5,7 @@
         <a class="no-underline" href="/">kris.ventures</a>
       </div>
       <div>
-        <a href="https://twitter.com/kris_bogdanov" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+        <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
         <a href="https://github.com/kb1995" target="_blank" rel="noopener noreferrer"><i class="ml-4 fab fa-github"></i></a>
         <a href="https://www.linkedin.com/in/kris-bogdanov/" target="_blank" rel="noopener noreferrer"><i class="ml-4 fab fa-linkedin-in"></i></a>
       </div>
@@ -15,20 +15,6 @@
 </section>
 
 <!-- JS stuff -->
-<script src="//unpkg.com/spiritjs/dist/spirit.min.js" />
-<script src="https://unpkg.com/spiritjs/dist/spirit.js"></script>
 {% asset headroom.js %}
 {% asset anime.min.js %}
 {% asset application.js %}
-
-<script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
-</script>
