@@ -72,6 +72,11 @@ h5, h6{
   font-weight: 500;
 }
 
+mark{
+  padding: 3px 7px;
+  background-color: $secondary-4;
+}
+
 // Links
 
 a{

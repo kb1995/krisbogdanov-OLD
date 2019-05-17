@@ -1,5 +1,5 @@
 $primary: #00AD45;
-$secondary: #ad1414;
+$secondary: #ffc62b;
 
 $text-color: #000;
 
@@ -7,10 +7,22 @@ $primary-2: #4dc67d;
 $primary-3: #80d6a2;
 $primary-4: #ccefda;
 
+$secondary-2: #ffd155;
+$secondary-3: #ffe395;
+$secondary-4: #ffeebf;
+
+
 .btn-primary{
   color: white !important;
   &:hover{
     color: white;
+  }  
+}
+
+.btn-secondary{
+  color: $secondary-4 !important;
+  &:hover{
+    color: $secondary-4;
   }  
 }
 
