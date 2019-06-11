@@ -9,14 +9,14 @@ fields:
   name: image
   label: image
 - type: text
+  name: slug
+  label: slug
+- type: text
   name: title
   label: title
 - type: text
   name: subtitle
   label: subtitle
-- type: text
-  name: permalink
-  label: permalink
 - type: datetime
   name: date
   label: date
