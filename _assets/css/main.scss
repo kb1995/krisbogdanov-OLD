@@ -16,6 +16,7 @@
 
 // pages
 @import 'custom/pages/blog';
+@import 'custom/pages/index';
 
 // font
 @import './custom/_font.scss';
@@ -59,13 +60,16 @@
   height: auto;
 
   @include media-breakpoint-up(lg) { 
-    height: 600px;
+    min-height: 100vh;
   }
 
   .hero-image{
     height: 400px;
     @include media-breakpoint-up(lg){
       height: inherit;
+      img{
+        height: 80vh;
+      }
     }
   }
 }
