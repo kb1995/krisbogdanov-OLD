@@ -75,10 +75,10 @@
 }
 
 .recent-article{
-  transition: all 0.25s ease;
+  transition: all 0.25s ease !important;
   height: auto;
   img{
-    transition: transform 0.25s ease;
+    transition: transform 0.25s ease !important;
   }
   &:hover{
     box-shadow: 0 5px 15px 0 rgba(0,0,0,0.2);
