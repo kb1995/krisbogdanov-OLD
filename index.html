@@ -21,28 +21,28 @@ layout: default
   <!-- Features -->
   <section>
     <div class="row">
-      <div data-aos="fade-up" data-aos-duration="1000"  data-aos-offset="50" class="col-lg-6 d-flex flex-column-reverse flex-lg-column align-items-center mb-4">
+      <div class="col-lg-6 d-flex flex-column-reverse flex-lg-column align-items-center mb-4">
           <img  class="feature-image" src="{% asset "landing-developer.svg" @path %}">
           <div>
             <h2 class="text-center mt-3">Full-stack</h2>
             <p class="text-muted text-center font-size-6 w-lg-50 w-75 mx-auto">I work as a Web Developer at <a class="link" href="https://wearewildgoose.com/uk/" target="_blank" rel="noopener noreferrer">Wildgoose</a>. My current stack is mainly Ruby on Rails, TailwindCSS and StimulusJS.</p>
           </div>
       </div>
-      <div data-aos="fade-up" data-aos-duration="1000"  data-aos-offset="50" data-aos-delay="250" class="col-lg-6 d-flex flex-column-reverse flex-lg-column align-items-center mb-4">
+      <div class="col-lg-6 d-flex flex-column-reverse flex-lg-column align-items-center mb-4">
           <img class="feature-image" src="{% asset "landing-maker.svg" @path %}">
           <div>
             <h2 class="text-center mt-3">Maker</h2>
             <p class="text-muted text-center font-size-6 w-lg-50 w-75 mx-auto">Besides making products that solve problems, I also strive to turn them into successful businesses.</p>
           </div>
       </div>
-      <div data-aos="fade-up" data-aos-duration="1000"  data-aos-offset="50" class="col-lg-6 d-flex flex-column-reverse flex-lg-column align-items-center mb-4">
+      <div class="col-lg-6 d-flex flex-column-reverse flex-lg-column align-items-center mb-4">
           <img class="feature-image" src="{% asset "landing-nomads.svg" @path %}">
           <div>
             <h2 class="text-center mt-3">Nomad</h2>
             <p class="text-muted text-center font-size-6 w-lg-50 w-75 mx-auto">My girlfriend and I travel the world, while working full-time. You can find plenty of photos of my laptop on <a class="link" href="https://www.instagram.com/{{ site.instagram_username }}" target="_blank" rel="noopener noreferrer">Instagram</a>.</p>
           </div>
       </div>
-      <div data-aos="fade-up" data-aos-duration="1000"  data-aos-offset="50" data-aos-delay="250" class="col-lg-6 d-flex flex-column-reverse flex-lg-column align-items-center mb-4">
+      <div class="col-lg-6 d-flex flex-column-reverse flex-lg-column align-items-center mb-4">
           <img class="feature-image" src="{% asset "landing-books.svg" @path %}">
           <div>
             <h2 class="text-center mt-3">Blogger</h2>
@@ -61,7 +61,7 @@ layout: default
       {% unless post.category contains "travel" %}
         {% assign counter = counter | plus: 1 %}
         <a href="{{ post.url }}" class="no-underline no-color-change">
-          <div data-aos="fade-up" data-aos-duration="1000"  data-aos-offset="50">
+          <div>
             <div class="row mb-4 mb-lg-3 recent-article p-3 rounded-2 justify-content-center">
               <div class="col-lg-4 overflow-hidden rounded-2 border h-200px h-lg-100">
                 <img class="w-100 h-100 mr-5 object-fit-cover transform-scale-2" src="{% asset "{{ post.image }}" @path %}">
@@ -82,7 +82,7 @@ layout: default
       {% endif %}
     {% endfor %}
     <div class="row justify-content-center justify-content-lg-start px-3">
-      <a data-aos="zoom-in" data-aos-duration="500"  data-aos-offset="100" class="btn btn-primary font-size-6 px-4 mt-3 btn-cta" href="/blog/">All articles</a>
+      <a class="btn btn-primary font-size-6 px-4 mt-3 btn-cta" href="/blog/">All articles</a>
     </div>
   </section>
   <!-- Get in touch -->
