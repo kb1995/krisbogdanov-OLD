@@ -102,7 +102,30 @@ tags: [bulgaria, travel, expenses, money]
 </div>
 
 <div>
+  <h2>How we scored the city</h2>
+  <svg class="line-chart"></svg>
+  <p>We use <a href="https://rickshawlabs.com/post/rubric" target="_blank" rel="noopener noreferrer">Rickshaw Report Rubric</a> criteria for scoring the locations we visit. We included <mark>Community</mark> to the list as it is an important factor to us.</p>
+</div>
+
+<div>
   <h2>Where are we going next?</h2>
   <p>Next, we are off to Malaga, Spain (well, I'm writing this article from here). Unsurprisingly, Bulgaria was much cheaper than England.</p>
   <p>I'm excited to see how this compares to Malaga. Malaga is a tourist city with a high standard of living, so I expect that the numbers will be higher.</p>
 </div>
+
+<script>
+  const svg = document.querySelector('.line-chart')
+
+  new chartXkcd.Bar(svg, {
+    title: 'Sofia, Bulgaria - Overall Score 7.0',
+    data: {
+      labels: ["Safety", "Cleanliness", "Community", "Food", "Fun", "Work-life", "Walkable", "Comfort", "Visitor-friendly", "Affortability", "Culture"],
+      datasets: [{
+        data: [7, 8, 5, 8, 4, 8, 8, 8, 7, 10, 9],
+      }],
+    },
+    options: {
+      yTickCount: 10,
+    },
+  });
+</script>

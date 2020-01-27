@@ -114,8 +114,31 @@ tags: [malaga, travel, expenses, money, co-working]
 </div>
 
 <div>
+  <h2>How we scored the city</h2>
+  <svg class="line-chart"></svg>
+  <p>We use <a href="https://rickshawlabs.com/post/rubric" target="_blank" rel="noopener noreferrer">Rickshaw Report Rubric</a> criteria for scoring the locations we visit. We included <mark>Community</mark> to the list as it is an important factor to us.</p>
+</div>
+
+<div>
   <h2>Where are we going next?</h2>
   <p>We are going back to England for about a week, so I can graduate and say hi to the team.</p>
   <p>After that, we are straight off to Zagreb, where we will stay for 1 month.</p>
   <p>I'm excited for the upcoming month - I plan to focus on my fitness and getting back into a routine. Let's see how it goes.</p>
 </div>
+
+<script>
+  const svg = document.querySelector('.line-chart')
+
+  new chartXkcd.Bar(svg, {
+    title: 'Malaga, Spain - Overall Score 6.4',
+    data: {
+      labels: ["Safety", "Cleanliness", "Community", "Food", "Fun", "Work-life", "Walkable", "Comfort", "Visitor-friendly", "Affortability", "Culture"],
+      datasets: [{
+        data: [6, 6, 10, 7, 7, 10, 7, 6, 9, 4, 8],
+      }],
+    },
+    options: {
+      yTickCount: 10,
+    },
+  });
+</script>
