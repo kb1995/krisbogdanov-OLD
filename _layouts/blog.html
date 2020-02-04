@@ -9,7 +9,8 @@
         <div class="w-100 w-lg-50 mx-auto my-5 container">
           <div class="text-center-children">
             <h1 class="main-title">{{ page.title }}</h1>
-            <h4 class="w-75 mx-auto text-muted subtitle">{{ page.subtitle }}</h4>
+            <h4 class="w-75 mx-auto text-muted subtitle mb-3">{{ page.subtitle }}</h4>
+            <h5 class="text-muted text-center mb-3">{{ page.date | date_to_long_string }}</h5>
           </div>
         </div>
         <div class="overflow-hidden">
@@ -21,7 +22,7 @@
           "></div>
         </div>
         <div class="blog-main-wrapper mt-3 mb-5 container">
-          <div class="text-center-children">
+          <!-- <div class="text-center-children">
             <div>
               {% if page.tags.size > 0 %}
                 <div class="mb-3">
@@ -34,9 +35,8 @@
                 </div>
               {% endif %}
             </div>
-            <h5 class="text-muted text-center mb-5">{{ page.date | timeago }}</h5>
-          </div>
-          <section>
+          </div> -->
+          <section class="mt-3">
             <div class="blog-content-wrapper">
               <div>
                 {{ content }}

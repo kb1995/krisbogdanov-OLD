@@ -1,4 +1,4 @@
-console.log("If you are reading this, we should probably chat. Drop me an email from the contact page.")
+console.log("If you are reading this, we should probably chat.")
 
 // grab an element
 var myElement = document.querySelector(".header");

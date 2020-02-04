@@ -10,5 +10,4 @@ group :jekyll_plugins do
   gem 'jekyll-sitemap', '~> 1.1'
   gem 'jekyll-paginate-v2', '~> 1.8', '>= 1.8.1'
   gem 'jekyll-tagging', '~> 1.1'
-  gem 'jekyll-timeago', '~> 0.12.3'
 end
