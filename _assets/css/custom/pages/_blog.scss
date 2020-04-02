@@ -50,15 +50,11 @@
     margin-top: 1rem;
     margin-bottom: 0.5rem;
   }
-  p{
+  p, li{
     font-size: 24px;
     margin: 0;
     margin: 1rem 0; 
     line-height: 36px;
-  }
-  li{
-    font-size: 24px;
-    margin: 1rem 0;
   }
 
   .btn{
@@ -75,11 +71,7 @@
     h2{
       font-size: 36px;
     }
-    p {
-      font-size: 18px;
-      margin: 1rem 0;
-    }
-    li{
+    p, li {
       font-size: 18px;
       margin: 1rem 0;
     }

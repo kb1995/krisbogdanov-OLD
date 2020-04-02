@@ -1,4 +1,4 @@
-console.log("If you are reading this, we should probably chat.")
+console.log("Easter egg 👀")
 
 // grab an element
 var myElement = document.querySelector(".header");
